@@ -16,9 +16,15 @@ import PhotosTwo from '../../images/photos2.jpg'
 import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
 import Navbar from '../Navbar/Navbar';
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import StockImage from './StockImage';
+import Recent1 from './Recent1';
+import blog1 from '../../images/blog-1.jpeg'
+import blog2 from '../../images/blog-2.jpeg'
+import Recent2 from './Recent2';
+import Clients from './Clients';
 
 
 
@@ -429,7 +435,7 @@ function Home() {
                     <Box>
                         <Flex alignItems={'center'} justifyContent={'space-between'}>
                             <Box fontWeight={'bold'}>Recent Post</Box>
-                            <Flex justifyContent={'space-between'} >
+                            <Flex ms={'5'} justifyContent={'space-between'} >
                                 <InputGroup ms={'3'}  >
                                     <InputLeftElement pointerEvents="none">
                                         <AiOutlineSearch />
@@ -457,33 +463,39 @@ function Home() {
                 <Container maxWidth={'container.2xl'}>
                     <Grid templateColumns={'6fr 3fr 3fr'}>
                         <GridItem>
-                            <Flex
-                                p={50}
-                                w="full"
-                                alignItems="center"
-                                justifyContent="center"
-                            >
-                                <Box
-                                    mx={{ lg: 8 }}
-                                    display={{ lg: "flex" }}
-                                    maxW={{ lg: "5xl" }}
-                                    shadow={{ lg: "lg" }}
-                                    rounded={{ lg: "lg" }}
-                                >
-                                    <Box w={{ lg: "50%" }}>
-                                        <Box width={'52'} >
-                                            <Image src={PhotosOne}></Image>
-                                        </Box>
-                                    </Box>
-
-                                    <Box py={12} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
-                                        <Text></Text>
-                                    </Box>
-                                </Box>
-                            </Flex>
+                            <Recent1 img={PhotosOne} />
+                            <Recent1 img={PhotosTwo} />
+                            <Recent1 img={photosFour} />
+                        </GridItem>
+                        <GridItem>
+                            <Recent2 img={blog1} />
+                        </GridItem>
+                        <GridItem ms={'5'}>
+                            <Recent2 img={secnery} />
                         </GridItem>
                     </Grid>
                 </Container>
+
+                <Box mt={'24'} mb={'10'}>
+                    <Box textAlign={'center'}>
+                        <Text fontSize={'4xl'} fontWeight={'bold'}>Welcome To Our  <span style={{ 'color': '#FE94A2', }}>Clients</span> Say</Text>
+
+                        <Text color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of  </Text>
+
+                    </Box>
+                    <Box textAlign={'end'} w={'80%'} mt={'-8'}>
+                        <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
+
+                    </Box>
+                </Box>
+
+                <Box mt={'20'}>
+                    <Grid templateColumns={'3fr 3fr 3fr'}>
+                        <Clients />
+                        <Clients />
+                        <Clients />
+                    </Grid>
+                </Box>
             </Box >
         </Box >
     )

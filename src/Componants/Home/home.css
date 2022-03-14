@@ -2,3 +2,8 @@
     background-image: url('../../images/background.png');
     height: 100vh;
 }
+
+.wishlist{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 96.08%);
+filter: blur(25px);
+}
