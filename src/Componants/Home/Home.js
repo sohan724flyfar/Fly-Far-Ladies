@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Container, Flex, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Link, Menu, MenuButton, MenuItem, MenuList, Select, Text } from '@chakra-ui/react';
+import { Avatar, Box, Button, Container, Flex, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Select, Text } from '@chakra-ui/react';
 import React from 'react'
 import worldImage from '../../images/world.png'
 import plane from '../../images/plane.png'
@@ -16,16 +16,15 @@ import PhotosTwo from '../../images/photos2.jpg'
 import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
 import Navbar from '../Navbar/Navbar';
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { AiOutlineSearch } from 'react-icons/ai';
-import { ChevronDownIcon } from '@chakra-ui/icons';
 import StockImage from './StockImage';
 import Recent1 from './Recent1';
 import blog1 from '../../images/blog-1.jpeg'
 import blog2 from '../../images/blog-2.jpeg'
 import Recent2 from './Recent2';
 import Clients from './Clients';
-
+import qutation from '../../images/qutation.png'
+import qutation2 from '../../images/qutation2.png'
 
 
 
@@ -489,13 +488,47 @@ function Home() {
                     </Box>
                 </Box>
 
-                <Box mt={'20'}>
-                    <Grid templateColumns={'3fr 3fr 3fr'}>
-                        <Clients />
-                        <Clients />
-                        <Clients />
-                    </Grid>
+                <Box mt={'12'} mb={12}>
+                    <Container maxW={'container.xl'}>
+                        <Grid templateColumns={'3fr 3fr 3fr'} gap={10}>
+                            <Clients />
+                            <Clients />
+                            <Clients />
+                        </Grid>
+                    </Container>
                 </Box>
+
+                <Box mt={'24'} mb={'10'}>
+                    <Box textAlign={'center'}>
+                        <Text fontSize={'4xl'} fontWeight={'bold'}>  <span style={{ 'color': '#FE94A2', }}>Media</span> And <span style={{ 'color': '#FE94A2', }}>Asset</span></Text>
+
+                    </Box>
+
+                </Box>
+
+                <Container maxWidth={'container.xl'}>
+                    <Text fontSize={'xl'} fontWeight={'bold'}>  <span style={{ 'color': '#FE94A2', }}>Founder</span> Massage</Text>
+
+                    <Grid templateColumns={'6fr 6fr'} gap={10}>
+                        <GridItem>
+                            <Box mt={'2'} fontSize={'14px'}>
+                                <Image mt={''} display={'inline-block'} src={qutation} />
+
+                                Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get in touch with the appropriate team or send an email to Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get intouch with the appropriate team or send an email to  Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get in touch with the appropriate team or send an email to Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get in touch with the appropriate team or send an email to Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get in touch with the appropriate team or send an email to Our Press team loves working with journalist the world to share compelling, unique stories. If You’re member of the media and would like to talk please get in touch with the appropriate team or send an email to!
+                                <Image mt={''} display={'inline-block'} src={qutation2} />
+                            </Box>
+                            <Box textAlign={'end'} mt={2}>
+                                <Text fontWeight={'BOLD'}>Nusrat jahan</Text>
+                                <Text pe={2} fontSize={'12PX'}>Founder & CEO</Text>
+                            </Box>
+                        </GridItem>
+
+                        <GridItem>
+                            <Image h={'90%'} w={'full'} shadow="0px 0px 11px rgba(245, 153, 166, 0.85);" mt={''} src={blog2} />
+
+                        </GridItem>
+                    </Grid>
+                </Container>
             </Box >
         </Box >
     )
