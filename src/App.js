@@ -6,8 +6,8 @@ import Navbar from './Componants/Navbar/Navbar';
 function App() {
   return (
     <ChakraProvider>
-      <Navbar />
-      <Home/>
+
+      <Home />
 
 
     </ChakraProvider>
