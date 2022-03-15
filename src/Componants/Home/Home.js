@@ -34,7 +34,12 @@ import member1 from '../../images/member1.jpeg'
 import member2 from '../../images/member2.jpeg'
 import member3 from '../../images/member4.jpeg'
 import member4 from '../../images/member1.jpeg'
-
+import logo from '../../images/logo.png'
+import icon1 from '../../images/facebook.png'
+import icon2 from '../../images/skype.png'
+import icon3 from '../../images/linkdin.png'
+import icon4 from '../../images/instagram.png'
+import icon5 from '../../images/youtube.png'
 
 
 function Home() {
@@ -42,7 +47,9 @@ function Home() {
     return (
         <Box>
             <Box className='home'>
-                <Navbar />
+                <Container maxW={'container.2xl'}>
+                    <Navbar />
+                </Container>
                 <Container maxW={'container.lg'} >
                     <Grid templateColumns='repeat(2, 1fr)' gap={'10'} >
                         <GridItem mt={'16'}  >
@@ -581,6 +588,23 @@ function Home() {
                         </Grid>
 
                     </Container>
+                </Box>
+
+                <Box mt={'26'}>
+                    <Grid templateColumns={'4fr 4fr 4fr'}>
+                        <GridItem>
+                            <Image w={'26'} src={logo} />
+                            <Text mt={'2'} fontSize={'13px'}>It is a long established fact that a reader will be. by content. It is a long established.</Text>
+
+                            <Flex>
+                                <Image src={icon1} />
+                                <Image src={icon2} />
+                                <Image src={icon3} />
+                                <Image src={icon4} />
+                            </Flex>
+
+                        </GridItem>
+                    </Grid>
                 </Box>
 
             </Box >

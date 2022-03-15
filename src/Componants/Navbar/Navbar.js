@@ -46,11 +46,11 @@ export default function Navbar() {
                             display="flex"
                             alignItems="center"
                         >
-                            <Image w={'26'} src={logo} />
+                            <Image w={'28'} src={logo} />
                             <VisuallyHidden>Flyfar-Ladies</VisuallyHidden>
                         </chakra.a>
 
-                        <InputGroup ms={'3'} w={{ base: '50', md: 'auto' }} >
+                        <InputGroup ms={'3'} w={{ base: '50', md: 'auto' }} mt={2} >
                             <InputLeftElement pointerEvents="none">
                                 <AiOutlineSearch />
                             </InputLeftElement>
