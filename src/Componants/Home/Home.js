@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Container, Flex, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Select, Text } from '@chakra-ui/react';
+import { Avatar, Box, Button, Container, Flex, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Link, Select, Text } from '@chakra-ui/react';
 import React from 'react'
 import worldImage from '../../images/world.png'
 import plane from '../../images/plane.png'
@@ -17,7 +17,6 @@ import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
 import Navbar from '../Navbar/Navbar';
 import { AiOutlineSearch } from 'react-icons/ai';
-import StockImage from './StockImage';
 import Recent1 from './Recent1';
 import blog1 from '../../images/blog-1.jpeg'
 import blog2 from '../../images/blog-2.jpeg'
@@ -40,7 +39,10 @@ import icon2 from '../../images/skype.png'
 import icon3 from '../../images/linkdin.png'
 import icon4 from '../../images/instagram.png'
 import icon5 from '../../images/youtube.png'
-
+import massage2 from '../../images/massage 2.png'
+import call from '../../images/call.png'
+import PackageSlider from './PackageSlider';
+import StockImageSlider from './StockImageSlider';
 
 function Home() {
 
@@ -142,7 +144,7 @@ function Home() {
 
                 </Container>
 
-                <Box mt={'60'}>
+                <Box mt={'72'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Our Most Popular  <span style={{ 'color': '#FE94A2', }}>Tours</span> </Text>
 
@@ -153,241 +155,7 @@ function Home() {
 
                 <Box mt={'10'}>
                     <Container maxW={'container.xl'} mb={'56'}>
-                        <Grid templateColumns='repeat(4, 1fr)' gap={6}>
-                            <GridItem w='95%' rounded="lg" >
-                                <Flex
-                                    shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
-                                    rounded="lg"
-                                    p={3}
-                                    w="full"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                >
-                                    <Box
-                                        mx="auto"
-                                        rounded="lg"
-
-                                        maxW="2xl"
-                                    >
-                                        <Image
-                                            rounded="xl"
-                                            w="full"
-                                            h={'full'}
-                                            fit="cover"
-                                            src={secnery}
-                                        // border={'1px solid #FE94A2'}
-
-
-                                        />
-
-                                        <Box p={3}>
-                                            <Flex justifyContent={'space-between'}>
-                                                <Text fontWeight={'bold'}>Tangor Haor</Text>
-                                                <Box sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >BDT 35200</Box>
-                                            </Flex>
-
-                                            <Flex alignItems={'center'} mt={'1'} >
-                                                <Box display={'inline'}><Image me={'2'} src={location2}></Image></Box>
-                                                <Box>
-                                                    <span >Sunamgang.Bnagladesh</span>
-                                                </Box>
-                                            </Flex>
-
-                                            <Box fontSize={14} ms={5} mt={'2'} color={'gray.600'}>
-                                                <span>Journey Start Date : 01 apr,2022</span> <br />
-                                                <span>Journey End Date : 03 apr,2022</span>
-                                            </Box>
-
-                                            <Flex alignItems={'center'} mt={'2'} ms={5} >
-                                                <Box display={'inline'}><Image me={'2'} src={clock}></Image></Box>
-                                                <Box>
-                                                    <span >2 Days, 3 Nights</span>
-                                                </Box>
-                                            </Flex>
-
-
-
-                                        </Box>
-                                    </Box>
-                                </Flex>
-
-                            </GridItem>
-                            <GridItem w='95%' rounded="lg" >
-                                <Flex
-                                    shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
-                                    rounded="lg"
-                                    p={3}
-                                    w="full"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                >
-                                    <Box
-                                        mx="auto"
-                                        rounded="lg"
-
-                                        maxW="2xl"
-                                    >
-                                        <Image
-                                            rounded="xl"
-                                            w="full"
-                                            h={'full'}
-                                            fit="cover"
-                                            src={secnery}
-                                        // border={'1px solid #FE94A2'}
-
-
-                                        />
-
-                                        <Box p={3}>
-                                            <Flex justifyContent={'space-between'}>
-                                                <Text fontWeight={'bold'}>Tangor Haor</Text>
-                                                <Box sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >BDT 35200</Box>
-                                            </Flex>
-
-                                            <Flex alignItems={'center'} mt={'1'} >
-                                                <Box display={'inline'}><Image me={'2'} src={location2}></Image></Box>
-                                                <Box>
-                                                    <span >Sunamgang.Bnagladesh</span>
-                                                </Box>
-                                            </Flex>
-
-                                            <Box fontSize={14} ms={5} mt={'2'} color={'gray.600'}>
-                                                <span>Journey Start Date : 01 apr,2022</span> <br />
-                                                <span>Journey End Date : 03 apr,2022</span>
-                                            </Box>
-
-                                            <Flex alignItems={'center'} mt={'2'} ms={5} >
-                                                <Box display={'inline'}><Image me={'2'} src={clock}></Image></Box>
-                                                <Box>
-                                                    <span >2 Days, 3 Nights</span>
-                                                </Box>
-                                            </Flex>
-
-
-
-                                        </Box>
-                                    </Box>
-                                </Flex>
-
-                            </GridItem>
-                            <GridItem w='95%' rounded="lg" >
-                                <Flex
-                                    shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
-                                    rounded="lg"
-                                    p={3}
-                                    w="full"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                >
-                                    <Box
-                                        mx="auto"
-                                        rounded="lg"
-
-                                        maxW="2xl"
-                                    >
-                                        <Image
-                                            rounded="xl"
-                                            w="full"
-                                            h={'full'}
-                                            fit="cover"
-                                            src={secnery}
-                                        // border={'1px solid #FE94A2'}
-
-
-                                        />
-
-                                        <Box p={3}>
-                                            <Flex justifyContent={'space-between'}>
-                                                <Text fontWeight={'bold'}>Tangor Haor</Text>
-                                                <Box sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >BDT 35200</Box>
-                                            </Flex>
-
-                                            <Flex alignItems={'center'} mt={'1'} >
-                                                <Box display={'inline'}><Image me={'2'} src={location2}></Image></Box>
-                                                <Box>
-                                                    <span >Sunamgang.Bnagladesh</span>
-                                                </Box>
-                                            </Flex>
-
-                                            <Box fontSize={14} ms={5} mt={'2'} color={'gray.600'}>
-                                                <span>Journey Start Date : 01 apr,2022</span> <br />
-                                                <span>Journey End Date : 03 apr,2022</span>
-                                            </Box>
-
-                                            <Flex alignItems={'center'} mt={'2'} ms={5} >
-                                                <Box display={'inline'}><Image me={'2'} src={clock}></Image></Box>
-                                                <Box>
-                                                    <span >2 Days, 3 Nights</span>
-                                                </Box>
-                                            </Flex>
-
-
-
-                                        </Box>
-                                    </Box>
-                                </Flex>
-
-                            </GridItem>
-                            <GridItem w='95%' rounded="lg" >
-                                <Flex
-                                    shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
-                                    rounded="lg"
-                                    p={3}
-                                    w="full"
-                                    alignItems="center"
-                                    justifyContent="center"
-                                >
-                                    <Box
-                                        mx="auto"
-                                        rounded="lg"
-
-                                        maxW="2xl"
-                                    >
-                                        <Image
-                                            rounded="xl"
-                                            w="full"
-                                            h={'full'}
-                                            fit="cover"
-                                            src={secnery}
-                                        // border={'1px solid #FE94A2'}
-
-
-                                        />
-
-                                        <Box p={3}>
-                                            <Flex justifyContent={'space-between'}>
-                                                <Text fontWeight={'bold'}>Tangor Haor</Text>
-                                                <Box sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >BDT 35200</Box>
-                                            </Flex>
-
-                                            <Flex alignItems={'center'} mt={'1'} >
-                                                <Box display={'inline'}><Image me={'2'} src={location2}></Image></Box>
-                                                <Box>
-                                                    <span >Sunamgang.Bnagladesh</span>
-                                                </Box>
-                                            </Flex>
-
-                                            <Box fontSize={14} ms={5} mt={'2'} color={'gray.600'}>
-                                                <span>Journey Start Date : 01 apr,2022</span> <br />
-                                                <span>Journey End Date : 03 apr,2022</span>
-                                            </Box>
-
-                                            <Flex alignItems={'center'} mt={'2'} ms={5} >
-                                                <Box display={'inline'}><Image me={'2'} src={clock}></Image></Box>
-                                                <Box>
-                                                    <span >2 Days, 3 Nights</span>
-                                                </Box>
-                                            </Flex>
-
-
-
-                                        </Box>
-                                    </Box>
-                                </Flex>
-
-                            </GridItem>
-
-                        </Grid>
+                        <PackageSlider />
                     </Container>
                 </Box>
 
@@ -428,13 +196,7 @@ function Home() {
 
                 <Box pb={'22'}>
                     <Container maxW={'container.xl'}>
-                        <Grid templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }} gap={'5'}>
-                            <StockImage img={PhotosOne} />
-                            <StockImage img={PhotosTwo} />
-                            <StockImage img={photosThree} />
-                            <StockImage img={photosFour} />
-
-                        </Grid>
+                        <StockImageSlider />
                     </Container>
                 </Box>
 
@@ -590,25 +352,68 @@ function Home() {
                     </Container>
                 </Box>
 
-                <Box mt={'26'}>
-                    <Grid templateColumns={'4fr 4fr 4fr'}>
-                        <GridItem>
-                            <Image w={'26'} src={logo} />
-                            <Text mt={'2'} fontSize={'13px'}>It is a long established fact that a reader will be. by content. It is a long established.</Text>
 
-                            <Flex>
-                                <Image src={icon1} />
-                                <Image src={icon2} />
-                                <Image src={icon3} />
-                                <Image src={icon4} />
-                            </Flex>
 
-                        </GridItem>
-                    </Grid>
+                <Box h={'30%'}>
+                    <Container mt={'32'} maxW={'container.xl'} >
+                        <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
+                            <GridItem>
+                                <Image w={'26'} src={logo} />
+                                <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
+
+                                <Flex alignItems={'center'} mt={2}>
+                                    <Image src={icon1} />
+                                    <Image ms={3} src={icon2} />
+                                    <Image ms={3} src={icon5} />
+                                    <Image ms={3} src={icon4} />
+                                </Flex>
+
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Company</Text>
+                                <Box mt={'4'}>
+                                    <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
+                                    <Link fontSize={'14px'} color={'gray.600'}>Trems and Condition</Link> <br />
+                                    <Link fontSize={'14px'} color={'gray.600'}>Privacy Policy</Link> <br /></Box>
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Contact Us</Text>
+                                <Flex alignItems={'center'} mt={4}>
+                                    <Image src={call} />
+                                    <Text ms={'2'} color={'gray.600'}> 09639 205 206</Text>
+                                </Flex>
+                                <Flex alignItems={'center'} mt={3}>
+                                    <Image src={massage2} />
+                                    <Text ms={'2'} color={'gray.600'}> support@flyfarladies.com</Text>
+                                </Flex>
+                                <Flex alignItems={'center'} mt={3}>
+                                    <Image w={'20px'} src={location2} />
+                                    <Text ms={'3'} color={'gray.600'}> Ka-11, 2A Bashundhara <br /> Rd, Jagannathpur 1229</Text>
+                                </Flex>
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Subscribe For news later</Text>
+                                <Text mt={'4'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that <br /> a reader will be by content.</Text>
+
+                                <Flex alignItems={'center'} mt={'2'}>
+                                    <InputGroup w={{ base: '50', md: 'auto' }} mt={2} >
+                                        <InputLeftElement pointerEvents="none">
+                                            <AiOutlineSearch />
+                                        </InputLeftElement>
+                                        <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
+                                    </InputGroup>
+                                    <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
+
+                                </Flex>
+
+                            </GridItem>
+                        </Grid>
+                    </Container>
                 </Box>
 
+
             </Box >
-        </Box >
+        </Box>
     )
 }
 

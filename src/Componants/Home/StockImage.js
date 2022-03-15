@@ -7,9 +7,10 @@ import wishlist3 from '../../images/wishlist3.png'
 import './home.css'
 
 
+
 const StockImage = (props) => {
     return (
-        <GridItem position={'relative'} overflow="hidden" border={'1px'} borderColor={'transparent'} borderRadius={'xl'} role="group">
+        <Box position={'relative'} overflow="hidden" border={'1px'} borderColor={'transparent'} borderRadius={'xl'} role="group">
             <Image _hover={{ transform: "scale(1.1)", transition: "all 400ms ease", filter: "grayscale(0.5)" }} borderRadius={'xl'} w={'62'} src={props.img}></Image>
 
             <Box position={'absolute'} _groupHover={{ top: "5px", right: "5px" }}>
@@ -25,7 +26,7 @@ const StockImage = (props) => {
                 </Flex>
             </Box>
 
-        </GridItem>
+        </Box>
     );
 };
 
