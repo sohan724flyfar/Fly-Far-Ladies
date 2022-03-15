@@ -1,6 +1,7 @@
 .home{
     background-image: url('../../images/background.png');
     height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .wishlist{

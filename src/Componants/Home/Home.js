@@ -25,6 +25,15 @@ import Recent2 from './Recent2';
 import Clients from './Clients';
 import qutation from '../../images/qutation.png'
 import qutation2 from '../../images/qutation2.png'
+import daily from '../../images/daily.png'
+import jamuna from '../../images/jamuna.png'
+import prothom from '../../images/prothom.png'
+import Press from './Press';
+import CoreTeam from './CoreTeam';
+import member1 from '../../images/member1.jpeg'
+import member2 from '../../images/member2.jpeg'
+import member3 from '../../images/member4.jpeg'
+import member4 from '../../images/member1.jpeg'
 
 
 
@@ -529,6 +538,51 @@ function Home() {
                         </GridItem>
                     </Grid>
                 </Container>
+
+                <Container mt={'24'} maxWidth={'container.xl'}>
+                    <Flex alignItems={'center'}>
+                        <Text>Press Coverage</Text>
+                        <Box ms={'3'}>
+                            <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
+
+                        </Box>
+                    </Flex>
+                </Container>
+
+                <Box mt={'12'} mb={12}>
+                    <Container maxW={'container.xl'}>
+                        <Grid templateColumns={'2fr 2fr 2fr 2fr'} gap={16}>
+                            <Press img={prothom} />
+                            <Press img={daily} />
+                            <Press img={jamuna} />
+                            <Press img={prothom} />
+                        </Grid>
+
+                    </Container>
+                </Box>
+
+                <Box mt={'24'} mb={'10'}>
+                    <Box textAlign={'center'}>
+                        <Text fontSize={'4xl'} fontWeight={'bold'}>Our Core  <span style={{ 'color': '#FE94A2', }}>Team</span> </Text>
+
+                        <Text color={'gray.600'}>In publishing and graphic design, Lorem ipsum is a placeholder text <br /> commonly used to demonstrate the visual form of a document</Text>
+
+                    </Box>
+
+                </Box>
+
+                <Box mt={'12'} mb={12}>
+                    <Container maxW={'container.xl'}>
+                        <Grid templateColumns={'2fr 2fr 2fr 2fr'} gap={5}>
+                            <CoreTeam img={member1} />
+                            <CoreTeam img={member2} />
+                            <CoreTeam img={member3} />
+                            <CoreTeam img={member1} />
+                        </Grid>
+
+                    </Container>
+                </Box>
+
             </Box >
         </Box >
     )
