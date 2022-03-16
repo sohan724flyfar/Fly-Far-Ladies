@@ -354,8 +354,8 @@ function Home() {
 
 
 
-                <Box h={'30%'}>
-                    <Container mt={'32'} maxW={'container.xl'} >
+                <Box mt={'80'}>
+                    <Container mt={'32'} pb={28} maxW={'container.xl'} >
                         <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
                             <GridItem>
                                 <Image w={'26'} src={logo} />
