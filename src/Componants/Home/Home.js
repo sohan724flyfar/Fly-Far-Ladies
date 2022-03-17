@@ -43,6 +43,8 @@ import massage2 from '../../images/massage 2.png'
 import call from '../../images/call.png'
 import PackageSlider from './PackageSlider';
 import StockImageSlider from './StockImageSlider';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import bankCard from '../../images/bankCard.png'
 
 function Home() {
 
@@ -150,10 +152,15 @@ function Home() {
 
                         <Text marginTop={'4'} color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of <br /> document or a typeface without relying on meaningful content. </Text>
                     </Box>
+                    <Box >
+                        <Container maxW={'container.xl'}  >
+                            <Flex pe={8} justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+                        </Container>
+                    </Box>
                 </Box>
 
 
-                <Box mt={'10'}>
+                <Box mt={''}>
                     <Container maxW={'container.xl'} mb={'56'}>
                         <PackageSlider />
                     </Container>
@@ -186,11 +193,17 @@ function Home() {
                     </Container>
                 </Box>
 
-                <Box mt={'36'} mb={'10'}>
+                <Box mt={'36'} >
                     <Box textAlign={'center'}>
-                        <Text fontSize={'4xl'} fontWeight={'bold'}>Stock  <span style={{ 'color': '#FE94A2', }}>Images</span> <span>&</span> <span style={{ 'color': '#FE94A2', }}>Vedio</span></Text>
+                        <Text fontSize={'4xl'} fontWeight={'bold'}>Stock  <span style={{ 'color': '#FE94A2', }}>Images</span> <span>&</span> <span style={{ 'color': '#FE94A2', }}>Video</span></Text>
 
                         <Text color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of  </Text>
+                    </Box>
+
+                    <Box >
+                        <Container maxW={'container.xl'}  >
+                            <Flex pe={10} justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+                        </Container>
                     </Box>
                 </Box>
 
@@ -212,12 +225,17 @@ function Home() {
                     <Box>
                         <Flex alignItems={'center'} justifyContent={'space-between'}>
                             <Box fontWeight={'bold'}>Recent Post</Box>
-                            <Flex ms={'5'} justifyContent={'space-between'} >
+                            <Box  >
+
+                                <Flex justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+
+                            </Box>
+                            {/* <Flex ms={'5'} justifyContent={'space-between'} >
                                 <InputGroup ms={'3'}  >
                                     <InputLeftElement pointerEvents="none">
                                         <AiOutlineSearch />
                                     </InputLeftElement>
-                                    <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'3xl'} type="tel" placeholder="Search..." />
+                                    <Input bg={'white'} _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'3xl'} type="tel" placeholder=" Quick Search..." />
                                 </InputGroup>
 
                                 <Select ms={'3'} color={'white'} backgroundColor={'#FE94A2'} _hover={{ 'borderColor': '#FE94A2', 'bg': 'white', 'color': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'sm'} placeholder='Select Writer'>
@@ -232,12 +250,12 @@ function Home() {
                                     <option value='option3'>Option 3</option>
                                 </Select>
 
-                            </Flex>
+                            </Flex> */}
                         </Flex>
                     </Box>
                 </Container>
 
-                <Container maxWidth={'container.2xl'}>
+                <Container maxWidth={'container.2xl'} pe={'16'}>
                     <Grid templateColumns={'6fr 3fr 3fr'}>
                         <GridItem>
                             <Recent1 img={PhotosOne} />
@@ -260,15 +278,16 @@ function Home() {
                         <Text color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of  </Text>
 
                     </Box>
-                    <Box textAlign={'end'} w={'80%'} mt={'-8'}>
-                        <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
 
-                    </Box>
                 </Box>
 
                 <Box mt={'12'} mb={12}>
                     <Container maxW={'container.xl'}>
-                        <Grid templateColumns={'3fr 3fr 3fr'} gap={10}>
+                        <Box textAlign={'end'} w={'100%'} mt={'-8'}>
+                            <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch More <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
+
+                        </Box>
+                        <Grid mt={'8'} templateColumns={'3fr 3fr 3fr'} gap={10}>
                             <Clients />
                             <Clients />
                             <Clients />
@@ -310,7 +329,7 @@ function Home() {
 
                 <Container mt={'24'} maxWidth={'container.xl'}>
                     <Flex alignItems={'center'}>
-                        <Text>Press Coverage</Text>
+                        <Text fontWeight={'bold'}>Press Coverage</Text>
                         <Box ms={'3'}>
                             <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
 
@@ -340,7 +359,7 @@ function Home() {
 
                 </Box>
 
-                <Box mt={'12'} mb={12}>
+                <Box mt={'12'} >
                     <Container maxW={'container.xl'}>
                         <Grid templateColumns={'2fr 2fr 2fr 2fr'} gap={5}>
                             <CoreTeam img={member1} />
@@ -353,65 +372,75 @@ function Home() {
                 </Box>
 
 
+                {/* footer */}
+                <Box p={'9'} >
+                    <Box mt={'20'}  >
+                        <Container mt={'32'} maxW={'container.xl'} >
+                            <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
+                                <GridItem>
+                                    <Image w={'26'} src={logo} />
+                                    <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
 
-                <Box mt={'80'}>
-                    <Container mt={'32'} pb={28} maxW={'container.xl'} >
-                        <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
-                            <GridItem>
-                                <Image w={'26'} src={logo} />
-                                <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
+                                    <Flex alignItems={'center'} mt={2}>
+                                        <Image src={icon1} />
+                                        <Image ms={3} src={icon2} />
+                                        <Image ms={3} src={icon5} />
+                                        <Image ms={3} src={icon4} />
+                                    </Flex>
 
-                                <Flex alignItems={'center'} mt={2}>
-                                    <Image src={icon1} />
-                                    <Image ms={3} src={icon2} />
-                                    <Image ms={3} src={icon5} />
-                                    <Image ms={3} src={icon4} />
-                                </Flex>
+                                </GridItem>
+                                <GridItem>
+                                    <Text fontWeight={'bold'}>Company</Text>
+                                    <Box mt={'4'}>
+                                        <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
+                                        <Link fontSize={'14px'} color={'gray.600'}>Trems and Condition</Link> <br />
+                                        <Link fontSize={'14px'} color={'gray.600'}>Privacy Policy</Link> <br /></Box>
+                                </GridItem>
+                                <GridItem>
+                                    <Text fontWeight={'bold'}>Contact Us</Text>
+                                    <Flex alignItems={'center'} mt={4}>
+                                        <Image src={call} />
+                                        <Text ms={'2'} color={'gray.600'}> 09639 205 206</Text>
+                                    </Flex>
+                                    <Flex alignItems={'center'} mt={3}>
+                                        <Image src={massage2} />
+                                        <Text ms={'2'} color={'gray.600'}> support@flyfarladies.com</Text>
+                                    </Flex>
+                                    <Flex alignItems={'center'} mt={3}>
+                                        <Image w={'20px'} src={location2} />
+                                        <Text ms={'3'} color={'gray.600'}> Ka-11, 2A Bashundhara <br /> Rd, Jagannathpur 1229</Text>
+                                    </Flex>
+                                </GridItem>
+                                <GridItem>
+                                    <Text fontWeight={'bold'}>Subscribe For news later</Text>
+                                    <Text mt={'4'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that <br /> a reader will be by content.</Text>
 
-                            </GridItem>
-                            <GridItem>
-                                <Text fontWeight={'bold'}>Company</Text>
-                                <Box mt={'4'}>
-                                    <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
-                                    <Link fontSize={'14px'} color={'gray.600'}>Trems and Condition</Link> <br />
-                                    <Link fontSize={'14px'} color={'gray.600'}>Privacy Policy</Link> <br /></Box>
-                            </GridItem>
-                            <GridItem>
-                                <Text fontWeight={'bold'}>Contact Us</Text>
-                                <Flex alignItems={'center'} mt={4}>
-                                    <Image src={call} />
-                                    <Text ms={'2'} color={'gray.600'}> 09639 205 206</Text>
-                                </Flex>
-                                <Flex alignItems={'center'} mt={3}>
-                                    <Image src={massage2} />
-                                    <Text ms={'2'} color={'gray.600'}> support@flyfarladies.com</Text>
-                                </Flex>
-                                <Flex alignItems={'center'} mt={3}>
-                                    <Image w={'20px'} src={location2} />
-                                    <Text ms={'3'} color={'gray.600'}> Ka-11, 2A Bashundhara <br /> Rd, Jagannathpur 1229</Text>
-                                </Flex>
-                            </GridItem>
-                            <GridItem>
-                                <Text fontWeight={'bold'}>Subscribe For news later</Text>
-                                <Text mt={'4'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that <br /> a reader will be by content.</Text>
+                                    <Flex alignItems={'center'} mt={'2'}>
+                                        <InputGroup w={{ base: '50', md: 'auto' }} mt={2} >
+                                            <InputLeftElement pointerEvents="none">
+                                                <AiOutlineSearch />
+                                            </InputLeftElement>
+                                            <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
+                                        </InputGroup>
+                                        <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
 
-                                <Flex alignItems={'center'} mt={'2'}>
-                                    <InputGroup w={{ base: '50', md: 'auto' }} mt={2} >
-                                        <InputLeftElement pointerEvents="none">
-                                            <AiOutlineSearch />
-                                        </InputLeftElement>
-                                        <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
-                                    </InputGroup>
-                                    <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
+                                    </Flex>
 
-                                </Flex>
+                                </GridItem>
+                            </Grid>
 
-                            </GridItem>
-                        </Grid>
-                    </Container>
+                        </Container>
+
+                    </Box>
+
+
+                    <Flex mt={'8'} pb={'3'} justifyContent={'center'} >
+
+                        <Image h={'90%'} w={'60%'} src={bankCard} />
+                    </Flex>
+                    <Text pb={'3'} textAlign={'center'} mt={'1'}>@All Right Reserved By Fly Far Ladies & Developed By FLy Far Tech</Text>
+
                 </Box>
-
-
             </Box >
         </Box>
     )

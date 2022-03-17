@@ -7,6 +7,7 @@ import './home.css'
 import secnery from '../../images/Scenery2.png'
 import location2 from '../../images/location1.png'
 import clock from '../../images/clock.png'
+import wishlist from '../../images/wishlist.png'
 
 export default class PackageSlider extends Component {
     render() {
@@ -24,7 +25,7 @@ export default class PackageSlider extends Component {
 
                 <Slider py={'10'} {...settings}   >
                     <div >
-                        <Box margin={'4'}>
+                        <Box margin={'4'} >
                             <Flex
                                 shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
                                 rounded="lg"
@@ -39,16 +40,16 @@ export default class PackageSlider extends Component {
 
                                     maxW="2xl"
                                 >
-                                    <Image
-                                        rounded="xl"
-                                        w="full"
-                                        h={'full'}
-                                        fit="cover"
-                                        src={secnery}
-                                    // border={'1px solid #FE94A2'}
+                                    <Box border={'3px solid #FE94A2'} p={0} rounded="xl">
+                                        <Image
 
-
-                                    />
+                                            rounded="xl"
+                                            w="100%"
+                                            h={'100%'}
+                                            fit="cover"
+                                            src={secnery}
+                                        />
+                                    </Box>
 
                                     <Box p={3}>
                                         <Flex justifyContent={'space-between'}>
@@ -84,7 +85,7 @@ export default class PackageSlider extends Component {
                     </div>
 
                     <div >
-                        <Box margin={'4'}>
+                        <Box margin={'4'} >
                             <Flex
                                 shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
                                 rounded="lg"
@@ -99,16 +100,16 @@ export default class PackageSlider extends Component {
 
                                     maxW="2xl"
                                 >
-                                    <Image
-                                        rounded="xl"
-                                        w="full"
-                                        h={'full'}
-                                        fit="cover"
-                                        src={secnery}
-                                    // border={'1px solid #FE94A2'}
+                                    <Box border={'3px solid #FE94A2'} p={0} rounded="xl">
+                                        <Image
 
-
-                                    />
+                                            rounded="xl"
+                                            w="100%"
+                                            h={'100%'}
+                                            fit="cover"
+                                            src={secnery}
+                                        />
+                                    </Box>
 
                                     <Box p={3}>
                                         <Flex justifyContent={'space-between'}>
@@ -144,7 +145,7 @@ export default class PackageSlider extends Component {
                     </div>
 
                     <div >
-                        <Box margin={'4'}>
+                        <Box margin={'4'} >
                             <Flex
                                 shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
                                 rounded="lg"
@@ -159,16 +160,16 @@ export default class PackageSlider extends Component {
 
                                     maxW="2xl"
                                 >
-                                    <Image
-                                        rounded="xl"
-                                        w="full"
-                                        h={'full'}
-                                        fit="cover"
-                                        src={secnery}
-                                    // border={'1px solid #FE94A2'}
+                                    <Box border={'3px solid #FE94A2'} p={0} rounded="xl">
+                                        <Image
 
-
-                                    />
+                                            rounded="xl"
+                                            w="100%"
+                                            h={'100%'}
+                                            fit="cover"
+                                            src={secnery}
+                                        />
+                                    </Box>
 
                                     <Box p={3}>
                                         <Flex justifyContent={'space-between'}>
@@ -204,7 +205,7 @@ export default class PackageSlider extends Component {
                     </div>
 
                     <div >
-                        <Box margin={'4'}>
+                        <Box margin={'4'} >
                             <Flex
                                 shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
                                 rounded="lg"
@@ -219,16 +220,19 @@ export default class PackageSlider extends Component {
 
                                     maxW="2xl"
                                 >
-                                    <Image
-                                        rounded="xl"
-                                        w="full"
-                                        h={'full'}
-                                        fit="cover"
-                                        src={secnery}
-                                    // border={'1px solid #FE94A2'}
+                                    <Box border={'3px solid #FE94A2'} p={0} rounded="xl">
+                                        <Image
 
-
-                                    />
+                                            rounded="xl"
+                                            w="full"
+                                            objectFit={'cover'}
+                                            h={'full'}
+                                            src={secnery}
+                                        />
+                                        {/* <Box bg={'red'}>
+                                            <Image src={wishlist} />
+                                        </Box> */}
+                                    </Box>
 
                                     <Box p={3}>
                                         <Flex justifyContent={'space-between'}>

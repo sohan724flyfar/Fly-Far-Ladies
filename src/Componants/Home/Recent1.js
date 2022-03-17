@@ -18,6 +18,7 @@ const Recent1 = (props) => {
                 maxW={{ lg: "5xl" }}
                 rounded={{ lg: "lg" }}
                 p={'1'}
+                bg={'white'}
             >
                 <Box p={'2'} >
                     <Box width={'32'} h={'full'} >
@@ -28,7 +29,7 @@ const Recent1 = (props) => {
                 <Box mt={'2'} maxW={{ base: "xl", lg: "5xl" }} ms={3} >
                     <Text fontWeight={'bold'}>Dark mode in ui design for mobileApps: beauty born in  the darkness</Text>
                     <Text fontSize={'10px'}>In publishing and graphic design, Lorem ipsum is a placeholder text...</Text>
-                    <Flex cursor={'pointer'} alignItems={'center'} > Learn more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+                    <Flex cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > Learn more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
                 </Box>
             </Box>
         </Flex>

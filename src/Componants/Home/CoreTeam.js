@@ -24,12 +24,10 @@ const CoreTeam = (props) => {
                     >
                         <Image
                             rounded="xl"
-                            w="400px"
-                            h={'300px'}
-                            fit="cover"
+                            w="250px"
+                            objectFit={'cover'}
+                            h={'250px'}
                             src={props.img}
-                        // border={'1px solid #FE94A2'}
-
 
                         />
 
