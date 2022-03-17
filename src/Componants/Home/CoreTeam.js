@@ -9,12 +9,15 @@ const CoreTeam = (props) => {
         <Box>
             <GridItem w='95%' rounded="lg" >
                 <Flex
-                    shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
                     rounded="lg"
                     p={3}
                     w="full"
                     alignItems="center"
                     justifyContent="center"
+                    _hover={{
+                        'bg': 'white',
+                        'shadow': '0px 0px 11px rgba(245, 153, 166, 0.85)'
+                    }}
                 >
                     <Box
                         mx="auto"
@@ -24,7 +27,7 @@ const CoreTeam = (props) => {
                     >
                         <Image
                             rounded="xl"
-                            w="250px"
+                            w={'306px'}
                             objectFit={'cover'}
                             h={'250px'}
                             src={props.img}

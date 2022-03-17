@@ -9,11 +9,9 @@ import secnery from '../../images/Scenery2.png'
 import location from '../../images/location.png'
 import './home.css'
 import location2 from '../../images/location1.png'
-import clock from '../../images/clock.png'
 import featuredJob from '../../images/featured-job.png'
 import PhotosOne from '../../images/Photos1.jpg'
 import PhotosTwo from '../../images/photos2.jpg'
-import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
 import Navbar from '../Navbar/Navbar';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -24,15 +22,8 @@ import Recent2 from './Recent2';
 import Clients from './Clients';
 import qutation from '../../images/qutation.png'
 import qutation2 from '../../images/qutation2.png'
-import daily from '../../images/daily.png'
-import jamuna from '../../images/jamuna.png'
-import prothom from '../../images/prothom.png'
+
 import Press from './Press';
-import CoreTeam from './CoreTeam';
-import member1 from '../../images/member1.jpeg'
-import member2 from '../../images/member2.jpeg'
-import member3 from '../../images/member4.jpeg'
-import member4 from '../../images/member1.jpeg'
 import logo from '../../images/logo.png'
 import icon1 from '../../images/facebook.png'
 import icon2 from '../../images/skype.png'
@@ -42,110 +33,121 @@ import icon5 from '../../images/youtube.png'
 import massage2 from '../../images/massage 2.png'
 import call from '../../images/call.png'
 import PackageSlider from './PackageSlider';
-import StockImageSlider from './StockImageSlider';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import bankCard from '../../images/bankCard.png'
+import CoreTeamSlider from './CoreTeamSlider';
+import StockImageSlider2 from './StockImageSlider2';
+import MediaSlider from './MediaSlider';
+import ClientsSlider from './ClientsSlider';
 
 function Home() {
 
     return (
-        <Box>
-            <Box className='home'>
-                <Container maxW={'container.2xl'}>
-                    <Navbar />
-                </Container>
-                <Container maxW={'container.lg'} >
-                    <Grid templateColumns='repeat(2, 1fr)' gap={'10'} >
-                        <GridItem mt={'16'}  >
-                            <Flex justifyContent={'center'} style={{ 'background': '#F4DFDF' }} width={'60'} p={'1'} borderRadius={'16'}>
-                                <Box mt={'-0.5'} sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >Let's Explore the World  </Box>
-                                <Image ms={'2'} mt={'0.5'} width={'5'} height={'5'} src={worldImage} alt='Dan Abramov' />
-                            </Flex>
-
-                            <Box marginTop={'5'}>
-                                <Text fontSize={'4xl'} fontWeight={'bold'}>It's a Big World <br /> Out   There  <span style={{ 'color': '#FE94A2', }}>Go Explore!</span> <Image sx={{ 'display': 'inline', 'width': '35px', }} src={plane}></Image> </Text>
+        <Box className='home'>
+            {/* navbar */}
+            <Container maxW={'container.2xl'}>
+                <Navbar />
+            </Container>
+            {/* navbar End */}
 
 
-                                <Text marginTop={'4'} color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of <br /> document or a typeface without relying on meaningful content. <br /> may be used as a placeholder before the final</Text>
+            {/* Banner design start */}
+            <Container maxW={'container.lg'} >
+                <Grid templateColumns='repeat(2, 1fr)' gap={'10'} >
+                    <GridItem mt={'16'}  >
+                        <Flex justifyContent={'center'} style={{ 'background': '#F4DFDF' }} width={'60'} p={'1'} borderRadius={'16'}>
+                            <Box mt={'-0.5'} sx={{ 'color': '#FE94A2', 'fontWeight': 'bold' }} >Let's Explore the World  </Box>
+                            <Image ms={'2'} mt={'0.5'} width={'5'} height={'5'} src={worldImage} alt='Dan Abramov' />
+                        </Flex>
+
+                        <Box marginTop={'5'}>
+                            <Text fontSize={'4xl'} fontWeight={'bold'}>It's a Big World <br /> Out   There  <span style={{ 'color': '#FE94A2', }}>Go Explore!</span> <Image sx={{ 'display': 'inline', 'width': '35px', }} src={plane}></Image> </Text>
+
+
+                            <Text marginTop={'4'} color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of  document or a typeface without relying on meaningful content. <br /> may be used as a placeholder before the final</Text>
+                        </Box>
+
+                        <Flex marginTop={'5'}>
+                            <Box>
+                                <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
+
                             </Box>
+                            <Box ms={'4'} >
+                                <Button _hover={{ 'backgroundColor': 'white', 'color': 'black', 'border': '1px solid #FE94A2' }} sx={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} >Read More</Button>
+                            </Box>
+                        </Flex>
 
-                            <Flex marginTop={'5'}>
-                                <Box>
-                                    <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch Vedio <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
+                    </GridItem>
 
-                                </Box>
-                                <Box ms={'4'} >
-                                    <Button _hover={{ 'backgroundColor': 'white', 'color': 'black', 'border': '1px solid #FE94A2' }} sx={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} >Read More</Button>
-                                </Box>
-                            </Flex>
+                    <GridItem mx={'auto'} position={'relative'} >
+                        <Box><Image ms={'16'} sx={{ 'width': '360px', 'height': '430px' }} src={bannerGirl}></Image></Box>
+                        <Box position={'absolute'} sx={{ 'top': '70px', 'left': '290px' }} ><Image width={'36'} ms={'16'} src={timePicture}></Image></Box>
 
-                        </GridItem>
+                        <Box position={'absolute'} sx={{ 'top': '200px', 'right': '230px' }} >
+                            <Flex
+                                position={'relative'}
+                                p={50}
+                                w="280px"
+                                alignItems="center"
+                                justifyContent="center"
+                            >
+                                <Box
+                                    mx="auto"
+                                    rounded="2xl"
+                                    shadow="sm"
+                                    maxW="2xl"
 
-                        <GridItem mx={'auto'} position={'relative'} >
-                            <Box><Image ms={'16'} sx={{ 'width': '360px', 'height': '430px' }} src={bannerGirl}></Image></Box>
-                            <Box position={'absolute'} sx={{ 'top': '70px', 'left': '290px' }} ><Image width={'36'} ms={'16'} src={timePicture}></Image></Box>
-
-                            <Box position={'absolute'} sx={{ 'top': '200px', 'right': '230px' }} >
-                                <Flex
-                                    position={'relative'}
-                                    p={50}
-                                    w="280px"
-                                    alignItems="center"
-                                    justifyContent="center"
+                                    backgroundColor={'white'}
                                 >
-                                    <Box
-                                        mx="auto"
-                                        rounded="2xl"
-                                        shadow="sm"
-                                        maxW="2xl"
+                                    <Image
+                                        rounded="3xl"
+                                        w="90%"
+                                        h={'full'}
+                                        src={secnery}
+                                        alt="Article"
+                                        mx={'auto'}
+                                        mt={'2'}
+                                    />
 
-                                        backgroundColor={'white'}
-                                    >
-                                        <Image
-                                            rounded="3xl"
-                                            w="90%"
-                                            h={'full'}
-                                            src={secnery}
-                                            alt="Article"
-                                            mx={'auto'}
-                                            mt={'2'}
-                                        />
-
-                                        <Box p={'3'} >
-                                            <Box>
-                                                <Image display={'inline'} me={'1'} src={location}></Image>
-                                                <Text display={'inline'} > Morocco</Text>
-                                            </Box>
-                                            <Text mt={'2'} width={'full'} borderRadius={'lg'} sx={{ 'height': '5px', 'backgroundColor': '#FF6469' }}></Text>
-                                            <Text mt={'2'} mb={'3'} width={'70%'} borderRadius={'lg'} sx={{ 'height': '5px', 'backgroundColor': '#C29151' }}></Text>
-
-
+                                    <Box p={'3'} >
+                                        <Box>
+                                            <Image display={'inline'} me={'1'} src={location}></Image>
+                                            <Text display={'inline'} > Morocco</Text>
                                         </Box>
+                                        <Text mt={'2'} width={'full'} borderRadius={'lg'} sx={{ 'height': '5px', 'backgroundColor': '#FF6469' }}></Text>
+                                        <Text mt={'2'} mb={'3'} width={'70%'} borderRadius={'lg'} sx={{ 'height': '5px', 'backgroundColor': '#C29151' }}></Text>
+
+
                                     </Box>
+                                </Box>
 
-                                    <Box position={'absolute'} sx={{ 'top': '240px', 'left': '110px' }} >
-                                        <Box >
-                                            <Avatar name='Dan Abrahmov' size='sm' src='https://i.ibb.co/nP4ky9V/273975415-306291008235872-9163209598122818815-n.png' />
-                                            <Avatar name='Kola Tioluwani' ml='-2' size='sm' src='https://i.ibb.co/CPtqpLw/273562364-667224527942972-7790949942330350981-n.png' />
-                                            <Avatar name='Kent Dodds' ml='-2' size='sm' src='https://i.ibb.co/nmZYQ9w/275025680-639749970436000-7961815956715700842-n.png' />
-                                            <Avatar name='Ryan Florence' ml='-2' size='sm' shadow='sm' src='https://i.ibb.co/dB14jq1/273887452-1474349882966941-5385975708901422518-n.png' />
-                                            <Avatar name='5 K' ml='-2' size='sm' bg='white' shadow='md'>+</Avatar>
-                                        </Box>
+                                <Box position={'absolute'} sx={{ 'top': '240px', 'left': '110px' }} >
+                                    <Box >
+                                        <Avatar name='Dan Abrahmov' size='sm' src='https://i.ibb.co/nP4ky9V/273975415-306291008235872-9163209598122818815-n.png' />
+                                        <Avatar name='Kola Tioluwani' ml='-2' size='sm' src='https://i.ibb.co/CPtqpLw/273562364-667224527942972-7790949942330350981-n.png' />
+                                        <Avatar name='Kent Dodds' ml='-2' size='sm' src='https://i.ibb.co/nmZYQ9w/275025680-639749970436000-7961815956715700842-n.png' />
+                                        <Avatar name='Ryan Florence' ml='-2' size='sm' shadow='sm' src='https://i.ibb.co/dB14jq1/273887452-1474349882966941-5385975708901422518-n.png' />
+                                        <Avatar name='5 K' ml='-2' size='sm' bg='white' shadow='md'>+</Avatar>
                                     </Box>
-                                </Flex>
+                                </Box>
+                            </Flex>
 
 
-                            </Box>
+                        </Box>
 
 
 
-                        </GridItem>
+                    </GridItem>
 
-                    </Grid>
+                </Grid>
 
 
-                </Container>
+            </Container>
+            {/* Banner design End */}
 
+
+            {/* Tours-packgae started */}
+            <Box>
                 <Box mt={'72'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Our Most Popular  <span style={{ 'color': '#FE94A2', }}>Tours</span> </Text>
@@ -158,16 +160,17 @@ function Home() {
                         </Container>
                     </Box>
                 </Box>
-
-
                 <Box mt={''}>
                     <Container maxW={'container.xl'} mb={'56'}>
                         <PackageSlider />
                     </Container>
                 </Box>
+            </Box>
+            {/* Tours-packgae End */}
 
 
-
+            {/* Featured job start */}
+            <Box>
                 <Box mb={'10'} mt={'-24'}>
                     <Container maxW={'container.xl'}>
                         <Grid templateColumns='repeat(2, 1fr)' gap={10}>
@@ -177,9 +180,9 @@ function Home() {
                             <GridItem w='100%' p={'3'} mt={'24'} ms={'5'} >
                                 <Text fontSize={'4xl'} fontWeight={'bold'}>Featured  <span style={{ 'color': '#FE94A2', }}>Job</span> </Text>
                                 <Text fontSize={'md'} color={'gray.600'}>Employers Offering Jobs</Text>
-                                <Box mt={'3'} width={'70%'}>
+                                <Box mt={'3'} width={'90%'}>
                                     <span fontSize={'lg'}   >
-                                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the <br /> visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available
+                                        In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the  visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before the final copy is available
                                     </span>
                                 </Box>
 
@@ -192,7 +195,12 @@ function Home() {
                         </Grid>
                     </Container>
                 </Box>
+            </Box>
+            {/* Featured job End */}
 
+
+            {/* stock image started */}
+            <Box>
                 <Box mt={'36'} >
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Stock  <span style={{ 'color': '#FE94A2', }}>Images</span> <span>&</span> <span style={{ 'color': '#FE94A2', }}>Video</span></Text>
@@ -209,10 +217,15 @@ function Home() {
 
                 <Box pb={'22'}>
                     <Container maxW={'container.xl'}>
-                        <StockImageSlider />
+                        <StockImageSlider2 />
                     </Container>
                 </Box>
+            </Box>
+            {/* stock image End */}
 
+
+            {/* Blog start */}
+            <Box>
                 <Box mt={'24'} mb={'10'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Welcome To Our  <span style={{ 'color': '#FE94A2', }}>Blog</span></Text>
@@ -270,7 +283,12 @@ function Home() {
                         </GridItem>
                     </Grid>
                 </Container>
+            </Box>
+            {/* Blog End */}
 
+
+            {/* Clients opinion started */}
+            <Box>
                 <Box mt={'24'} mb={'10'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Welcome To Our  <span style={{ 'color': '#FE94A2', }}>Clients</span> Say</Text>
@@ -287,14 +305,17 @@ function Home() {
                             <Button _hover={{ 'backgroundColor': 'white' }} sx={{ 'border': '1px solid #FE94A2', 'background': 'white' }} >Watch More <Image mt={'1'} ms={'2'} width={'4'} src={vedioIcon}></Image> </Button>
 
                         </Box>
-                        <Grid mt={'8'} templateColumns={'3fr 3fr 3fr'} gap={10}>
-                            <Clients />
-                            <Clients />
-                            <Clients />
-                        </Grid>
+
+                        <ClientsSlider />
+
                     </Container>
                 </Box>
+            </Box>
+            {/* Clients opinion End */}
 
+
+            {/* media and asset start */}
+            <Box>
                 <Box mt={'24'} mb={'10'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>  <span style={{ 'color': '#FE94A2', }}>Media</span> And <span style={{ 'color': '#FE94A2', }}>Asset</span></Text>
@@ -339,16 +360,15 @@ function Home() {
 
                 <Box mt={'12'} mb={12}>
                     <Container maxW={'container.xl'}>
-                        <Grid templateColumns={'2fr 2fr 2fr 2fr'} gap={16}>
-                            <Press img={prothom} />
-                            <Press img={daily} />
-                            <Press img={jamuna} />
-                            <Press img={prothom} />
-                        </Grid>
-
+                        <MediaSlider />
                     </Container>
                 </Box>
+            </Box>
+            {/* media and asset End */}
 
+
+            {/* core team start */}
+            <Box>
                 <Box mt={'24'} mb={'10'}>
                     <Box textAlign={'center'}>
                         <Text fontSize={'4xl'} fontWeight={'bold'}>Our Core  <span style={{ 'color': '#FE94A2', }}>Team</span> </Text>
@@ -361,88 +381,86 @@ function Home() {
 
                 <Box mt={'12'} >
                     <Container maxW={'container.xl'}>
-                        <Grid templateColumns={'2fr 2fr 2fr 2fr'} gap={5}>
-                            <CoreTeam img={member1} />
-                            <CoreTeam img={member2} />
-                            <CoreTeam img={member3} />
-                            <CoreTeam img={member1} />
+                        <CoreTeamSlider />
+                    </Container>
+                </Box>
+            </Box>
+            {/* core team End */}
+
+
+            {/* footer start */}
+            <Box p={'9'} >
+                <Box mt={'20'}  >
+                    <Container mt={'32'} maxW={'container.xl'} >
+                        <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
+                            <GridItem>
+                                <Image w={'26'} src={logo} />
+                                <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
+
+                                <Flex alignItems={'center'} mt={2}>
+                                    <Image src={icon1} />
+                                    <Image ms={3} src={icon2} />
+                                    <Image ms={3} src={icon5} />
+                                    <Image ms={3} src={icon4} />
+                                </Flex>
+
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Company</Text>
+                                <Box mt={'4'}>
+                                    <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
+                                    <Link fontSize={'14px'} color={'gray.600'}>Trems and Condition</Link> <br />
+                                    <Link fontSize={'14px'} color={'gray.600'}>Privacy Policy</Link> <br /></Box>
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Contact Us</Text>
+                                <Flex alignItems={'center'} mt={4}>
+                                    <Image src={call} />
+                                    <Text ms={'2'} color={'gray.600'}> 09639 205 206</Text>
+                                </Flex>
+                                <Flex alignItems={'center'} mt={3}>
+                                    <Image src={massage2} />
+                                    <Text ms={'2'} color={'gray.600'}> support@flyfarladies.com</Text>
+                                </Flex>
+                                <Flex alignItems={'center'} mt={3}>
+                                    <Image w={'20px'} src={location2} />
+                                    <Text ms={'3'} color={'gray.600'}> Ka-11, 2A Bashundhara <br /> Rd, Jagannathpur 1229</Text>
+                                </Flex>
+                            </GridItem>
+                            <GridItem>
+                                <Text fontWeight={'bold'}>Subscribe For news later</Text>
+                                <Text mt={'4'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that <br /> a reader will be by content.</Text>
+
+                                <Flex alignItems={'center'} mt={'2'}>
+                                    <InputGroup w={{ base: '50', md: 'auto' }} mt={2} >
+                                        <InputLeftElement pointerEvents="none">
+                                            <AiOutlineSearch />
+                                        </InputLeftElement>
+                                        <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
+                                    </InputGroup>
+                                    <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
+
+                                </Flex>
+
+                            </GridItem>
                         </Grid>
 
                     </Container>
-                </Box>
-
-
-                {/* footer */}
-                <Box p={'9'} >
-                    <Box mt={'20'}  >
-                        <Container mt={'32'} maxW={'container.xl'} >
-                            <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
-                                <GridItem>
-                                    <Image w={'26'} src={logo} />
-                                    <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
-
-                                    <Flex alignItems={'center'} mt={2}>
-                                        <Image src={icon1} />
-                                        <Image ms={3} src={icon2} />
-                                        <Image ms={3} src={icon5} />
-                                        <Image ms={3} src={icon4} />
-                                    </Flex>
-
-                                </GridItem>
-                                <GridItem>
-                                    <Text fontWeight={'bold'}>Company</Text>
-                                    <Box mt={'4'}>
-                                        <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
-                                        <Link fontSize={'14px'} color={'gray.600'}>Trems and Condition</Link> <br />
-                                        <Link fontSize={'14px'} color={'gray.600'}>Privacy Policy</Link> <br /></Box>
-                                </GridItem>
-                                <GridItem>
-                                    <Text fontWeight={'bold'}>Contact Us</Text>
-                                    <Flex alignItems={'center'} mt={4}>
-                                        <Image src={call} />
-                                        <Text ms={'2'} color={'gray.600'}> 09639 205 206</Text>
-                                    </Flex>
-                                    <Flex alignItems={'center'} mt={3}>
-                                        <Image src={massage2} />
-                                        <Text ms={'2'} color={'gray.600'}> support@flyfarladies.com</Text>
-                                    </Flex>
-                                    <Flex alignItems={'center'} mt={3}>
-                                        <Image w={'20px'} src={location2} />
-                                        <Text ms={'3'} color={'gray.600'}> Ka-11, 2A Bashundhara <br /> Rd, Jagannathpur 1229</Text>
-                                    </Flex>
-                                </GridItem>
-                                <GridItem>
-                                    <Text fontWeight={'bold'}>Subscribe For news later</Text>
-                                    <Text mt={'4'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that <br /> a reader will be by content.</Text>
-
-                                    <Flex alignItems={'center'} mt={'2'}>
-                                        <InputGroup w={{ base: '50', md: 'auto' }} mt={2} >
-                                            <InputLeftElement pointerEvents="none">
-                                                <AiOutlineSearch />
-                                            </InputLeftElement>
-                                            <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
-                                        </InputGroup>
-                                        <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
-
-                                    </Flex>
-
-                                </GridItem>
-                            </Grid>
-
-                        </Container>
-
-                    </Box>
-
-
-                    <Flex mt={'8'} pb={'3'} justifyContent={'center'} >
-
-                        <Image h={'90%'} w={'60%'} src={bankCard} />
-                    </Flex>
-                    <Text pb={'3'} textAlign={'center'} mt={'1'}>@All Right Reserved By Fly Far Ladies & Developed By FLy Far Tech</Text>
 
                 </Box>
-            </Box >
-        </Box>
+
+
+                <Flex mt={'8'} pb={'3'} justifyContent={'center'} >
+
+                    <Image h={'90%'} w={'60%'} src={bankCard} />
+                </Flex>
+                <Text pb={'3'} textAlign={'center'} mt={'1'}>@All Right Reserved By Fly Far Ladies & Developed By FLy Far Tech</Text>
+
+            </Box>
+            {/* footer start */}
+
+        </Box >
+
     )
 }
 

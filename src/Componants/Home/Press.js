@@ -14,11 +14,6 @@ const Press = (props) => {
 
             </Box>
 
-
-
-
-
-
         </GridItem>
     );
 };
