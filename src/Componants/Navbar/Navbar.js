@@ -21,14 +21,26 @@ import {
     MenuList,
     MenuItem,
     Container,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalCloseButton,
+    ModalBody,
+    Text,
+    Switch,
 } from "@chakra-ui/react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import logo from '../../images/logo.png'
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import facebook from '../../images/facebook2.png'
+import google from '../../images/google.png'
 
 export default function Navbar() {
     const bg = useColorModeValue("white", "gray.800");
     const mobileNav = useDisclosure();
+    const { isOpen: isSignupOpen, onOpen: onSignupOpen, onClose: onSignupClose } = useDisclosure();
+    const { isOpen: isSigninOpen, onOpen: onSigninOpen, onClose: onSigninClose } = useDisclosure()
 
     return (
         <Container maxWidth={'container.2xl'}>
@@ -88,10 +100,75 @@ export default function Navbar() {
                                         <MenuItem>Attend a Workshop</MenuItem>
                                     </MenuList>
                                 </Menu>
-                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} bg={'white'} bgColor={'transparent'} border={'1px solid #FE94A2'} >Sign in</Button>
-                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
+                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} bg={'white'} bgColor={'transparent'} border={'1px solid #FE94A2'} onClick={onSigninOpen} >Sign in</Button>
+
+                                <Modal isOpen={isSigninOpen} onClose={onSigninClose}>
+                                    <ModalOverlay />
+                                    <ModalContent>
+                                        <ModalCloseButton outlineColor={'transparent'} _focus={{ 'outline': 'none' }} />
+                                        <ModalBody textAlign={'center'} p={5} mt={10}>
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={google} />Continue With Google</Button>
+                                            <Text fontWeight={'bold'}>Or</Text>
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={facebook} />Continue With Facebook</Button>
+
+                                            <Box mt={'6'}>
+                                                <Input w={'90%'} border={'2px solid black'} placeholder='Email' type={'email'} />
+                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Password' type={'password'} />
+                                            </Box>
+
+                                            <Box mt={'6'}>
+                                                <Button w={'90%'} _focus={{ 'outline': 'none', }} _hover={{ 'color': '#FE94A2', 'bg': 'white' }} color={'white'} bgColor={'#FE94A2'} border={'2px solid #FE94A2'}  >Sign in</Button>
+                                            </Box>
+
+                                            <Flex ms={'5'} mt={'3'} w={'90%'} justifyContent={'space-between'}>
+                                                <Switch colorScheme={'#FE94A2'} id='email-alerts' />
+                                                <Text fontWeight={'bold'}>Forgot Password</Text>
+                                            </Flex>
+                                            <Text mt={'6'} fontSize={'12px'}>You Don't Have Account? <a href="">Sign Up</a></Text>
+                                        </ModalBody>
 
 
+                                    </ModalContent>
+                                </Modal>
+
+                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} onClick={onSignupOpen} >Sign Up</Button>
+
+                                <Modal isOpen={isSignupOpen} onClose={onSignupClose}>
+                                    <ModalOverlay />
+                                    <ModalContent>
+                                        <ModalCloseButton outlineColor={'transparent'} _focus={{ 'outline': 'none' }} />
+                                        <ModalBody textAlign={'center'} p={5} mt={10}>
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={google} />Continue With Google</Button>
+                                            <Text fontWeight={'bold'}>Or</Text>
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={facebook} />Continue With Facebook</Button>
+
+                                            <Box mt={'6'}>
+                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Name' type={'text'} />
+                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Date Of Birth' />
+                                                <Input colorScheme={'black'} mt={'3'} w={'90%'} border={'2px solid black'} placeholder='Phone Number' type={'text'} />
+
+                                                <Input mt={'3'} colorScheme={'black'} w={'90%'} border={'2px solid black'} placeholder='Email' type={'email'} />
+                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Password' type={'password'} />
+                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Re-type Password' type={'password'} />
+
+
+                                            </Box>
+
+                                            <Box mt={'6'}>
+                                                <Button w={'90%'} _focus={{ 'outline': 'none', }} _hover={{ 'color': '#FE94A2', 'bg': 'white' }} color={'white'} bgColor={'#FE94A2'} border={'2px solid #FE94A2'}  >Sign up</Button>
+                                            </Box>
+                                            <Text mt={'6'} fontSize={'12px'}>You Have An Account? <a href="">Sign In</a></Text>
+
+
+                                            <Text mt={'6'} fontSize={'10px'}>You Have An Account? <a href="">This site is protected by reCAPTCHA and the <span color="red" >Google Privacy Policy</span> and Terms of Service apply.</a></Text>
+
+                                            <Text mt={'3'} fontSize={'10px'}>You Have An Account? <a href="">By clicking "Create account", I agree to Fly Far Ladies TOS and Privacy Policy.</a></Text>
+
+                                        </ModalBody>
+
+
+                                    </ModalContent>
+                                </Modal>
 
                             </HStack>
 
