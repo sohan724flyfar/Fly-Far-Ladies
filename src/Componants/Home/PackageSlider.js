@@ -12,7 +12,7 @@ export default class PackageSlider extends Component {
         const settings = {
             dots: true,
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: true,
             speed: 3000,
@@ -20,29 +20,41 @@ export default class PackageSlider extends Component {
             cssEase: "linear"
         };
         return (
-            <Container maxWidth={'container.xl'} >
+            <Container maxWidth={'container.2xl'} >
 
                 <Slider py={'10'} {...settings}   >
                     <div >
-                        <Box margin={'4'} >
+                        <Box margin={'2'} >
                             <Package />
                         </Box>
                     </div>
 
                     <div >
-                        <Box margin={'4'} >
+                        <Box margin={'2'} >
                             <Package />
                         </Box>
                     </div>
 
                     <div >
-                        <Box margin={'4'} >
+                        <Box margin={'2'} >
                             <Package />
                         </Box>
                     </div>
 
                     <div >
-                        <Box margin={'4'} >
+                        <Box margin={'2'} >
+                            <Package />
+                        </Box>
+                    </div>
+
+                    <div >
+                        <Box margin={'2'} >
+                            <Package />
+                        </Box>
+                    </div>
+
+                    <div >
+                        <Box margin={'2'} >
                             <Package />
                         </Box>
                     </div>

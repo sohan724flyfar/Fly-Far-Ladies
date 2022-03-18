@@ -6,6 +6,7 @@ import PhotosTwo from '../../images/photos2.jpg'
 import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
 import { Box } from "@chakra-ui/react";
+import './home.css'
 
 export default class StockImageSlider2 extends Component {
     render() {

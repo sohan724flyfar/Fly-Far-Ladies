@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Clients from "./Clients";
+import './home.css'
 
 export default class ClientsSlider extends Component {
     render() {

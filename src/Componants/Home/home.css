@@ -25,3 +25,9 @@ filter: blur(25px);
     padding-left: 2px;
     padding-right: 2px;
 }
+.slick-dots {
+    display: none;
+}
+.slick-dots li button:before{
+    display: none;
+}

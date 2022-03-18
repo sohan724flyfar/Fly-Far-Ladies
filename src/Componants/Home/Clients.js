@@ -7,8 +7,8 @@ import qutation2 from '../../images/qutation2.png'
 import './home.css'
 
 
-
 const Clients = (props) => {
+
     return (
 
 
@@ -26,13 +26,11 @@ const Clients = (props) => {
             </Flex>
 
             <Box mt={'2'} fontSize={'14px'}>
-                <span display={'inline-block'} > <Image mt={''} src={qutation} /></span>
-                <span display={'inline-block'} >
-                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
-                </span>
-                <span display={'inline-block'}  ><Image mt={''} src={qutation2} /></span>
+                <img src={qutation} alt="" style={{ display: 'inline' }} />
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.
+                <img src={qutation2} alt="" style={{ display: 'inline' }} />
             </Box>
-        </Box>
+        </Box >
 
 
 

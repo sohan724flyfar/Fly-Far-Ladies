@@ -6,6 +6,7 @@ import member1 from '../../images/member1.jpeg'
 import member2 from '../../images/member2.jpeg'
 import member3 from '../../images/member4.jpeg'
 import member4 from '../../images/member1.jpeg'
+import './home.css'
 
 export default class CoreTeamSlider extends Component {
     render() {

@@ -24,11 +24,13 @@ import {
     Modal,
     ModalOverlay,
     ModalContent,
-    ModalHeader,
+
     ModalCloseButton,
     ModalBody,
     Text,
     Switch,
+    InputRightElement,
+
 } from "@chakra-ui/react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import logo from '../../images/logo.png'
@@ -41,9 +43,11 @@ export default function Navbar() {
     const mobileNav = useDisclosure();
     const { isOpen: isSignupOpen, onOpen: onSignupOpen, onClose: onSignupClose } = useDisclosure();
     const { isOpen: isSigninOpen, onOpen: onSigninOpen, onClose: onSigninClose } = useDisclosure()
-
+    const [show, setShow] = React.useState(false)
+    const handleClick = () => setShow(!show)
     return (
-        <Container maxWidth={'container.2xl'}>
+
+        <Container Container maxWidth={'container.2xl'} >
             <React.Fragment>
                 <chakra.header
                     bg={'transparent'}
@@ -112,8 +116,24 @@ export default function Navbar() {
                                             <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={facebook} />Continue With Facebook</Button>
 
                                             <Box mt={'6'}>
-                                                <Input w={'90%'} border={'2px solid black'} placeholder='Email' type={'email'} />
-                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Password' type={'password'} />
+                                                <Input w={'90%'} placeholder='Email' type={'email'} focusBorderColor='#FE94A2' isInvalid
+                                                    errorBorderColor='black' />
+
+                                                <InputGroup mt={'3'} w={'90%'} ms={5}>
+                                                    <Input
+                                                        pr='4.5rem'
+                                                        type={show ? 'text' : 'password'}
+                                                        placeholder='Enter password'
+                                                        focusBorderColor='#FE94A2'
+                                                        isInvalid
+                                                        errorBorderColor='black'
+                                                    />
+                                                    <InputRightElement width='4.5rem'>
+                                                        <Button h='1.75rem' size='sm' onClick={handleClick}>
+                                                            {show ? 'Hide' : 'Show'}
+                                                        </Button>
+                                                    </InputRightElement>
+                                                </InputGroup>
                                             </Box>
 
                                             <Box mt={'6'}>
@@ -121,10 +141,13 @@ export default function Navbar() {
                                             </Box>
 
                                             <Flex ms={'5'} mt={'3'} w={'90%'} justifyContent={'space-between'}>
-                                                <Switch colorScheme={'#FE94A2'} id='email-alerts' />
+                                                <Flex alignItems={'center'}>
+                                                    <Switch me={'2'} id='email-alerts' />
+                                                    Remember
+                                                </Flex>
                                                 <Text fontWeight={'bold'}>Forgot Password</Text>
                                             </Flex>
-                                            <Text mt={'6'} fontSize={'12px'}>You Don't Have Account? <a href="">Sign Up</a></Text>
+                                            <Text mt={'6'} fontSize={'12px'}>You Don't Have Account? <a href="" >Sign Up</a></Text>
                                         </ModalBody>
 
 
@@ -143,13 +166,46 @@ export default function Navbar() {
                                             <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '2px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} bg={'white'} w={'90%'} border={'2px solid #FE94A2'}><Image w={5} me={'3'} src={facebook} />Continue With Facebook</Button>
 
                                             <Box mt={'6'}>
-                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Name' type={'text'} />
-                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Date Of Birth' />
-                                                <Input colorScheme={'black'} mt={'3'} w={'90%'} border={'2px solid black'} placeholder='Phone Number' type={'text'} />
+                                                <Input w={'90%'} isInvalid
+                                                    errorBorderColor='black' mt={'3'} placeholder='Name' type={'text'} />
+                                                <Input w={'90%'} isInvalid
+                                                    errorBorderColor='black' mt={'3'} placeholder='Date Of Birth' />
+                                                <Input isInvalid
+                                                    errorBorderColor='black' mt={'3'} w={'90%'} placeholder='Phone Number' type={'text'} />
 
-                                                <Input mt={'3'} colorScheme={'black'} w={'90%'} border={'2px solid black'} placeholder='Email' type={'email'} />
-                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Password' type={'password'} />
-                                                <Input w={'90%'} border={'2px solid black'} mt={'3'} placeholder='Re-type Password' type={'password'} />
+                                                <Input mt={'3'} isInvalid
+                                                    errorBorderColor='black' w={'90%'} placeholder='Email' type={'email'} />
+
+                                                <InputGroup mt={'3'} w={'90%'} ms={5}>
+                                                    <Input
+                                                        pr='4.5rem'
+                                                        type={show ? 'text' : 'password'}
+                                                        placeholder='Enter password'
+                                                        focusBorderColor='#FE94A2'
+                                                        isInvalid
+                                                        errorBorderColor='black'
+                                                    />
+                                                    <InputRightElement width='4.5rem'>
+                                                        <Button h='1.75rem' size='sm' onClick={handleClick}>
+                                                            {show ? 'Hide' : 'Show'}
+                                                        </Button>
+                                                    </InputRightElement>
+                                                </InputGroup>
+                                                <InputGroup mt={'3'} w={'90%'} ms={5}>
+                                                    <Input
+                                                        pr='4.5rem'
+                                                        type={show ? 'text' : 'password'}
+                                                        placeholder='Re-Type password'
+                                                        focusBorderColor='#FE94A2'
+                                                        isInvalid
+                                                        errorBorderColor='black'
+                                                    />
+                                                    <InputRightElement width='4.5rem'>
+                                                        <Button h='1.75rem' size='sm' onClick={handleClick}>
+                                                            {show ? 'Hide' : 'Show'}
+                                                        </Button>
+                                                    </InputRightElement>
+                                                </InputGroup>
 
 
                                             </Box>
@@ -233,6 +289,6 @@ export default function Navbar() {
                     </Flex>
                 </chakra.header>
             </React.Fragment>
-        </Container>
+        </Container >
     );
 }

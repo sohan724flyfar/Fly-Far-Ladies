@@ -5,6 +5,7 @@ import daily from '../../images/daily.png'
 import jamuna from '../../images/jamuna.png'
 import prothom from '../../images/prothom.png'
 import { Box } from "@chakra-ui/react";
+import './home.css'
 
 export default class MediaSlider extends Component {
     render() {

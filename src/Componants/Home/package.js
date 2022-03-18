@@ -22,14 +22,15 @@ const Package = () => {
 
                     maxW="2xl"
                 >
-                    <Box border={'3px solid #FE94A2'} p={0} rounded="xl">
+                    <Box p={0} rounded="xl">
                         <Image
-
+                            border={'3px solid #FE94A2'}
                             rounded="xl"
                             w="100%"
                             h={'100%'}
                             fit="cover"
                             src={secnery}
+                            p='0'
                         />
                     </Box>
 
@@ -42,7 +43,7 @@ const Package = () => {
                         <Flex alignItems={'center'} mt={'1'} >
                             <Box display={'inline'}><Image me={'2'} src={location2}></Image></Box>
                             <Box>
-                                <span >Sunamgang.Bnagladesh</span>
+                                <span >Sunamgang, Bnagladesh</span>
                             </Box>
                         </Flex>
 
