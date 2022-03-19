@@ -106,7 +106,7 @@ export default function Navbar() {
                                                 Service
                                             </MenuButton>
                                             <MenuList>
-                                                <MenuItem>Download</MenuItem>
+                                                <NavLink to="/package"><MenuItem>All Package</MenuItem></NavLink>
                                                 <MenuItem>Create a Copy</MenuItem>
                                                 <MenuItem>Mark as Draft</MenuItem>
                                                 <MenuItem>Delete</MenuItem>

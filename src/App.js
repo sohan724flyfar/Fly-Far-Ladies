@@ -30,17 +30,21 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" >
-            <PackageDetails />
+            <Home />
           </Route>
 
           <Route exact path="/home" >
-            <PackageDetails />
+            <Home />
           </Route>
 
 
-          {/* <Route exact path="/package" >
+          <Route path="/package" >
             <PackageMain />
-          </Route> */}
+          </Route>
+
+          <Route path="/packageDetails" >
+            <PackageDetails />
+          </Route>
 
 
 

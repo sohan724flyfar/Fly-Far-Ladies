@@ -189,9 +189,7 @@ const PackageMain = () => {
 
 
             {/* footer  start */}
-            <Container maxWidth={'container.xl'}>
-                <Footer />
-            </Container>
+            <Footer />
             {/* footer  end */}
 
 

@@ -4,6 +4,7 @@ import location from '../../images/location1.png'
 import person from '../../images/persons.png'
 import personClock from '../../images/personclock.png'
 import cancel from '../../images/cancel.png'
+import { NavLink } from 'react-router-dom';
 
 const FullPackage = (props) => {
 
@@ -53,7 +54,11 @@ const FullPackage = (props) => {
                             <Text color={'#FE94A2'} fontWeight={'semibold'} me={'3'}>BDT 35200</Text>
                             (Per person)
                         </Flex>
-                        <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'}  >Book Now</Button>
+                        <NavLink to="/packageDetails">
+                            <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'}  >Book Now</Button>
+                        </NavLink>
+
+
                     </Flex>
 
                 </Box>
