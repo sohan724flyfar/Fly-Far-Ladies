@@ -295,18 +295,7 @@ export default function Navbar() {
 
                                             <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'white'} >Jobs for Ladies</Button>
 
-                                            <Menu>
-                                                <MenuButton _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'white'} as={Button} rightIcon={<ChevronDownIcon />}>
-                                                    Design Package
-                                                </MenuButton>
-                                                <MenuList>
-                                                    <MenuItem>Download</MenuItem>
-                                                    <MenuItem>Create a Copy</MenuItem>
-                                                    <MenuItem>Mark as Draft</MenuItem>
-                                                    <MenuItem>Delete</MenuItem>
-                                                    <MenuItem>Attend a Workshop</MenuItem>
-                                                </MenuList>
-                                            </Menu>
+
                                             <Button _focus={{ 'outline': 'none', }} _hover={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} bg={'white'} bgColor={'white'} border={'1px solid #FE94A2'} >Sign in</Button>
                                             <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
                                         </VStack>
