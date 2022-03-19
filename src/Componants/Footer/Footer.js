@@ -10,18 +10,23 @@ import call from '../../images/call.png'
 import bankCard from '../../images/bankCard.png'
 import { AiOutlineSearch } from 'react-icons/ai';
 import location2 from '../../images/location1.png'
-
+import footer1 from '../../images/footerimage1.png'
+import footer2 from '../../images/footerimage2.png'
+import './footer.css'
 
 const Footer = () => {
     return (
         <div>
-            <Box p={'9'} >
-                <Box mt={'20'}  >
+            <Box p={'9'} className={'footerbg'} >
+                <Box   >
                     <Container mt={'32'} maxW={'container.xl'} >
                         <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
                             <GridItem>
                                 <Image w={'26'} src={logo} />
-                                <Text mt={'2'} fontSize={'13px'} color={'gray.600'}>It is a long established fact that a <br /> reader will be. by content. It is a <br /> long established.</Text>
+                                <Flex mt={'2'} >
+                                    <Image src={footer1} />
+                                    <Image ms={'2'} src={footer2} />
+                                </Flex>
 
                                 <Flex alignItems={'center'} mt={2}>
                                     <Image src={icon1} />
@@ -31,7 +36,7 @@ const Footer = () => {
                                 </Flex>
 
                             </GridItem>
-                            <GridItem>
+                            <GridItem ms={'6'}>
                                 <Text fontWeight={'bold'}>Company</Text>
                                 <Box mt={'4'}>
                                     <Link fontSize={'14px'} color={'gray.600'}>Payment Method</Link> <br />
@@ -62,7 +67,7 @@ const Footer = () => {
                                         <InputLeftElement pointerEvents="none">
                                             <AiOutlineSearch />
                                         </InputLeftElement>
-                                        <Input _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
+                                        <Input border={'2px'} _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} type="tel" placeholder="Search..." />
                                     </InputGroup>
                                     <Button ms={'3'} mt={'2'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
 

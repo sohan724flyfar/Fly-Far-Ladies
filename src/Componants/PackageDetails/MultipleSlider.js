@@ -31,26 +31,26 @@ export default class MultipleSlider extends Component {
                     ref={slider => (this.slider1 = slider)}
                 >
                     <div>
-                        <Image src={PhotosOne} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={PhotosOne} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosTwo} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={PhotosTwo} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={photosThree} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={photosThree} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={photosFour} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={photosFour} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosOne} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={PhotosOne} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosTwo} height={'400px'} width={'1006px'} />
+                        <Image border={'2px  solid #FE94A2'} rounded={'md'} src={PhotosTwo} height={'400px'} width={'1006px'} />
                     </div>
                 </Slider>
 
-                <Box mt={'2'} pt={'2.5'} pb={'1'} px={'42'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2; '}
+                <Box mt={'2'} pt={'2.5'} pb={'1'} px={'42'} bg={'white'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2; '} rounded={'md'}
                 >
                     <Slider
 

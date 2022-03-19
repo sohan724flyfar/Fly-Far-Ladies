@@ -1,3 +1,13 @@
-.navMenu:hover .navMenuList{
-    display: block;
+.navbg{
+    background-image: url('../../images/navbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
 }
+.chakra-container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+    

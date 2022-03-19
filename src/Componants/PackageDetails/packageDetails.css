@@ -1,0 +1,6 @@
+.allpackagebg{
+    background-image: url('../../images/package-detailsbg.png');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

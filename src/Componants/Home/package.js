@@ -9,12 +9,13 @@ const Package = () => {
     return (
         <Box>
             <Flex
-                shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
+                shadow="0px 0px 3px rgba(245, 153, 166, 0.85);"
                 rounded="lg"
                 p={3}
                 w="full"
                 alignItems="center"
                 justifyContent="center"
+                bg={'white'}
             >
                 <Box
                     mx="auto"

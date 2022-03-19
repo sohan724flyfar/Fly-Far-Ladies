@@ -40,4 +40,9 @@ legend {
 .css-1ltezim[aria-selected=true], .css-1ltezim[data-selected] {
   color:#FE94A2 !important ;
   border-color: #FE94A2 !important;
+  font-weight: bold;
+}
+
+.css-1ltezim[aria-selected=false], .css-1ltezim[data-selected] {
+  font-weight: bold;
 }
