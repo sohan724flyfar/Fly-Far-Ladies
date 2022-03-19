@@ -76,11 +76,11 @@ const Footer = () => {
                 </Box>
 
 
-                <Flex mt={'8'} pb={'3'} justifyContent={'center'} >
+                <Flex mt={'16'} pb={'10'} justifyContent={'center'} >
 
                     <Image h={'90%'} w={'60%'} src={bankCard} />
                 </Flex>
-                <Text pb={'3'} textAlign={'center'} mt={'1'}>© All Right Reserved By Fly Far Ladies & Developed By FLy Far Tech</Text>
+                <Text pb={'10'} textAlign={'center'} mt={'1'}>© All Right Reserved By Fly Far Ladies & Developed By FLy Far Tech</Text>
 
             </Box>
         </div>

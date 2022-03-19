@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chakra-checkbox__control, .css-1ltoixu {
+  border: 2px solid #FE94A2 !important;
+}
+
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  /* padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em; */
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-radius: 5px;
+  /* border-style: groove; */
+  border-color: #FE94A2;
+  /* border-image: initial; */
+}
+
+legend {
+  margin-left: 15px;
+  
+}
+
+.css-1ltezim[aria-selected=true], .css-1ltezim[data-selected] {
+  color:#FE94A2 !important ;
+  border-color: #FE94A2 !important;
+}

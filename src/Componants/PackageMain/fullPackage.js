@@ -10,7 +10,7 @@ const FullPackage = (props) => {
     return (
         <Box>
             <Box
-
+                bg={'white'}
                 border={'1px solid #FE94A2'}
                 shadow={'0px 0px 3px #FE94A2; '}
                 p={3}

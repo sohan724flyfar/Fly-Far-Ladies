@@ -4,7 +4,7 @@ import PhotosOne from '../../images/Photos1.jpg'
 import PhotosTwo from '../../images/photos2.jpg'
 import photosThree from '../../images/photos5.jpg'
 import photosFour from '../../images/photos4.jpg'
-import { Image } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 
 export default class MultipleSlider extends Component {
     constructor(props) {
@@ -24,59 +24,67 @@ export default class MultipleSlider extends Component {
 
     render() {
         return (
-            <div>
+            <Box width={'100%'} mx={'auto'} >
 
                 <Slider
                     asNavFor={this.state.nav2}
                     ref={slider => (this.slider1 = slider)}
                 >
                     <div>
-                        <Image src={PhotosOne} />
+                        <Image src={PhotosOne} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosTwo} />
+                        <Image src={PhotosTwo} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={photosThree} />
+                        <Image src={photosThree} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={photosFour} />
+                        <Image src={photosFour} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosOne} />
+                        <Image src={PhotosOne} height={'400px'} width={'1006px'} />
                     </div>
                     <div>
-                        <Image src={PhotosTwo} />
+                        <Image src={PhotosTwo} height={'400px'} width={'1006px'} />
                     </div>
                 </Slider>
 
-                <Slider
-                    asNavFor={this.state.nav1}
-                    ref={slider => (this.slider2 = slider)}
-                    slidesToShow={6}
-                    swipeToSlide={true}
-                    focusOnSelect={true}
+                <Box mt={'2'} pt={'2.5'} pb={'1'} px={'42'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2; '}
                 >
-                    <div>
-                        <Image src={PhotosTwo} />
-                    </div>
-                    <div>
-                        <Image src={photosThree} />
-                    </div>
-                    <div>
-                        <Image src={photosFour} />
-                    </div>
-                    <div>
-                        <Image src={PhotosOne} />
-                    </div>
-                    <div>
-                        <Image src={PhotosTwo} />
-                    </div>
-                    <div>
-                        <Image src={photosThree} />
-                    </div>
-                </Slider>
-            </div>
+                    <Slider
+
+                        asNavFor={this.state.nav1}
+                        ref={slider => (this.slider2 = slider)}
+                        slidesToShow={6}
+                        swipeToSlide={true}
+                        focusOnSelect={true}
+
+                    >
+                        <div>
+                            <Image src={PhotosTwo} />
+                        </div>
+                        <div>
+                            <Image src={photosThree} />
+                        </div>
+                        <div>
+                            <Image src={photosFour} />
+                        </div>
+                        <div>
+                            <Image src={PhotosOne} />
+                        </div>
+                        <div>
+                            <Image src={PhotosTwo} />
+                        </div>
+                        <div>
+                            <Image src={photosThree} />
+                        </div>
+                        <div>
+                            <Image src={photosThree} />
+                        </div>
+                    </Slider>
+                </Box>
+            </Box>
         );
     }
 }

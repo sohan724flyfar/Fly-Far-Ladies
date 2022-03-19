@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Container, Flex, Grid, GridItem, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text, } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Container, Flex, Grid, GridItem, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text, } from '@chakra-ui/react';
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import resort from '../../images/resort.png'
@@ -14,6 +14,7 @@ import photosFour from '../../images/photos4.jpg'
 import FullPackage from './fullPackage';
 import Footer from '../Footer/Footer';
 import Pagination from './Pagination';
+import './package.css'
 
 const PackageMain = () => {
 
@@ -47,8 +48,8 @@ const PackageMain = () => {
             {/* main package start */}
             <Container maxW={'container.xl'} mt={'20'}  >
                 <Grid templateColumns={'3fr 9fr'} gap={'10'} >
-                    <GridItem >
-                        <Box pb={3} rounded={'md'} border={'1px solid #FE94A2'} shadow={'0px 0px 3px #FE94A2; '} >
+                    <GridItem  >
+                        <Box pb={3} bg={'white'} rounded={'md'} border={'1px solid #FE94A2'} shadow={'0px 0px 3px #FE94A2; '} >
                             <Text p={3} borderBottom={'1px solid gray'} fontWeight={'semibold'}>Fliter</Text>
 
 
@@ -65,11 +66,27 @@ const PackageMain = () => {
                                     <Text>BDT 20325</Text>
                                 </Flex>
 
-                                <Text mt={3} fontWeight={'medium'}>Select Favorite Month</Text>
+                                <Text mt={4} fontWeight={'medium'}>Select Favorite Month</Text>
                                 {/* fieldset missing */}
+                                <fieldset mt={3} >
+                                    <legend>Month</legend>
+                                    <Select mt={'-2'} border='none' _focus={{ border: 'none' }} _hover={{ border: 'none' }} placeholder='January'>
+                                        <option value='option1'>February</option>
+                                        <option value='option2'>March</option>
+                                        <option value='option3'>April</option>
+                                        <option value='option3'>May</option>
+                                        <option value='option3'>June</option>
+                                        <option value='option3'>July</option>
+                                        <option value='option3'>August</option>
+                                        <option value='option3'>September</option>
+                                        <option value='option3'>October</option>
+                                        <option value='option3'>Novermber</option>
+                                        <option value='option3'>December</option>
+                                    </Select>
+                                </fieldset>
 
 
-                                <Text>
+                                <Text fontWeight={'medium'} mt={'6'}>
                                     Trip option
                                 </Text>
 
@@ -81,10 +98,10 @@ const PackageMain = () => {
                                 </Flex>
 
                                 <Box mt={'3'}>
-                                    <Checkbox size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox size='md' colorScheme='brand' >
                                         Day Trip
                                     </Checkbox> <br />
-                                    <Checkbox mt={'2'} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={'2'} size='md' colorScheme='brand' >
                                         Night Out
                                     </Checkbox>
 
@@ -92,16 +109,16 @@ const PackageMain = () => {
 
                                 <Box>
                                     <Text mt={3} fontWeight={'medium'}>Duration</Text>
-                                    <Checkbox mt={2} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
                                         Less then 1 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         2 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         3 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         5 Day
                                     </Checkbox>
 
@@ -109,16 +126,16 @@ const PackageMain = () => {
 
                                 <Box mt={'2'}>
                                     <Text mt={3} fontWeight={'medium'}>Inclusions</Text>
-                                    <Checkbox mt={2} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
                                         Accomodation
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         Meals
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         Transports
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         Seighitseeing
                                     </Checkbox>
 
@@ -126,13 +143,13 @@ const PackageMain = () => {
 
                                 <Box mt={'2'}>
                                     <Text mt={3} fontWeight={'medium'}>Budget</Text>
-                                    <Checkbox mt={2} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
                                         Premium
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         Economy
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         Super Economy
                                     </Checkbox> <br />
                                 </Box>
@@ -143,8 +160,8 @@ const PackageMain = () => {
 
                     </GridItem>
 
-                    <GridItem>
-                        <FullPackage img={PhotosOne} /> <br />
+                    <GridItem >
+                        <FullPackage bg={'white'} img={PhotosOne} /> <br />
 
                         <FullPackage img={PhotosTwo} /> <br />
                         <FullPackage img={photosThree} /> <br />

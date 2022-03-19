@@ -1,6 +1,10 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Componants/Home/Home';
+import MultipleSlider from './Componants/PackageDetails/MultipleSlider';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
 import PackageMain from './Componants/PackageMain/PackageMain';
 
@@ -23,14 +27,31 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" >
+            <Home />
+          </Route>
 
-      {/* <Home /> */}
-      {/* <PackageMain /> */}
-      <PackageDetails />
+          <Route exact path="/home" >
+            <Home />
+          </Route>
 
 
+          <Route exact path="/package" >
+            <PackageMain />
+          </Route>
+
+
+
+        </Switch>
+      </BrowserRouter>
     </ChakraProvider>
   );
 }
 
 export default App;
+
+{/* <Home /> */ }
+{/* <PackageMain /> */ }
+{/* <PackageDetails /> */ }

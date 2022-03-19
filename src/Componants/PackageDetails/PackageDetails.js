@@ -1,5 +1,6 @@
-import { Box, Button, Checkbox, Container, Flex, Grid, GridItem, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Text } from '@chakra-ui/react';
+import { Box, Button, Checkbox, Container, Flex, Grid, GridItem, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
 import React from 'react';
+import { HiOutlineMinusSm, HiOutlinePlusSm } from 'react-icons/hi';
 import { IoIosArrowBack } from 'react-icons/io';
 import Navbar from '../Navbar/Navbar';
 import MultipleSlider from './MultipleSlider';
@@ -16,10 +17,8 @@ const PackageDetails = () => {
             {/* main details start */}
             <Container maxW={'container.xl'} mt={'20'}  >
                 <Grid templateColumns={'3fr 9fr'} gap={'10'} >
-                    <GridItem >
-                        <Flex alignItems={'center'} fontSize={'16px'} fontWeight={'semibold'}><IoIosArrowBack me={'2'} /> Show all tours</Flex>
-
-                        <Box mt={'16'} pb={3} rounded={'md'} border={'1px solid #FE94A2'} shadow={'0px 0px 3px #FE94A2; '} >
+                    <GridItem  >
+                        <Box pb={3} bg={'white'} rounded={'md'} border={'1px solid #FE94A2'} shadow={'0px 0px 3px #FE94A2; '} >
                             <Text p={3} borderBottom={'1px solid gray'} fontWeight={'semibold'}>Fliter</Text>
 
 
@@ -36,11 +35,27 @@ const PackageDetails = () => {
                                     <Text>BDT 20325</Text>
                                 </Flex>
 
-                                <Text mt={3} fontWeight={'medium'}>Select Favorite Month</Text>
+                                <Text mt={4} fontWeight={'medium'}>Select Favorite Month</Text>
                                 {/* fieldset missing */}
+                                <fieldset mt={3} >
+                                    <legend>Month</legend>
+                                    <Select mt={'-2'} border='none' _focus={{ border: 'none' }} _hover={{ border: 'none' }} placeholder='January'>
+                                        <option value='option1'>February</option>
+                                        <option value='option2'>March</option>
+                                        <option value='option3'>April</option>
+                                        <option value='option3'>May</option>
+                                        <option value='option3'>June</option>
+                                        <option value='option3'>July</option>
+                                        <option value='option3'>August</option>
+                                        <option value='option3'>September</option>
+                                        <option value='option3'>October</option>
+                                        <option value='option3'>Novermber</option>
+                                        <option value='option3'>December</option>
+                                    </Select>
+                                </fieldset>
 
 
-                                <Text>
+                                <Text fontWeight={'medium'} mt={'6'}>
                                     Trip option
                                 </Text>
 
@@ -52,45 +67,75 @@ const PackageDetails = () => {
                                 </Flex>
 
                                 <Box mt={'3'}>
-                                    <Checkbox size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox size='md' colorScheme='brand' >
                                         Day Trip
                                     </Checkbox> <br />
-                                    <Checkbox mt={'2'} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={'2'} size='md' colorScheme='brand' >
                                         Night Out
                                     </Checkbox>
 
                                 </Box>
 
                                 <Box>
-                                    <Text mt={3} fontWeight={'medium'}>Duration</Text>
-                                    <Checkbox mt={2} size='md' isInvalid colorScheme='brand.100' >
+                                    <Text mt={4} fontWeight={'medium'}>Duration</Text>
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
                                         Less then 1 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         2 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         3 Day
                                     </Checkbox> <br />
-                                    <Checkbox mt={3} size='md' isInvalid colorScheme='brand.100' >
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
                                         5 Day
                                     </Checkbox>
 
                                 </Box>
 
+                                <Box mt={'2'} display={'none'}>
+                                    <Text mt={3} fontWeight={'medium'}>Inclusions</Text>
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
+                                        Accomodation
+                                    </Checkbox> <br />
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
+                                        Meals
+                                    </Checkbox> <br />
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
+                                        Transports
+                                    </Checkbox> <br />
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
+                                        Seighitseeing
+                                    </Checkbox>
 
+                                </Box>
 
-
+                                <Box mt={'2'} display={'none'}>
+                                    <Text mt={3} fontWeight={'medium'}>Budget</Text>
+                                    <Checkbox mt={2} size='md' colorScheme='brand' >
+                                        Premium
+                                    </Checkbox> <br />
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
+                                        Economy
+                                    </Checkbox> <br />
+                                    <Checkbox mt={3} size='md' colorScheme='brand' >
+                                        Super Economy
+                                    </Checkbox> <br />
+                                </Box>
 
                             </Box>
                         </Box>
+
+
                     </GridItem>
 
                     <GridItem>
                         <Text fontSize={'2xl'} fontWeight={'semibold'}>Haritage Resort- Daylong package</Text>
                         <Text fontSize={'12px'} >Dhaka, Bangladesh</Text>
-                        <Box mt={'3'}>
-                            {/* <MultipleSlider /> */}
+
+
+                        <Box w={'900px'} mt={'9'} >
+                            <MultipleSlider />
                         </Box>
 
                     </GridItem>
@@ -99,7 +144,83 @@ const PackageDetails = () => {
                 </Grid>
 
             </Container>
+            {/* main details end */}
 
+            {/* tabs & accordian start */}
+            <Container maxW={'container.xl'} mt={'10'} >
+                <Box border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2; '} rounded={'md'} p={'2'} >
+                    <Tabs>
+                        <TabList>
+                            <Tab >Details</Tab>
+                            <Tab  >Booking Policy</Tab>
+                            <Tab  >Refund Policy</Tab>
+                            <Tab  >Trems And Conditions</Tab>
+                        </TabList>
+
+                        <TabPanels>
+                            <TabPanel>
+                                <Grid templateColumns={'8fr 4fr'} gap={10}>
+                                    <GridItem>
+
+                                    </GridItem>
+
+                                    <GridItem>
+                                        <Box p={'3'} textAlign={'center'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2;'}>
+                                            <Text fontWeight={'semibold'} >Number Of Passenger</Text>
+                                            <Box p={'4'} mt={'3'} w={'80%'} mx={'auto'} border={'1px  solid #FE94A2'} rounded={'md'}>
+
+                                                <Flex justifyContent={'space-between'}>
+                                                    <Text fontWeight={'semibold'} fontSize={'14px'}>Adult</Text>
+                                                    <Flex >
+                                                        <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm /> </Text>
+
+                                                        <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+
+                                                        <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm /> </Text>
+                                                    </Flex>
+                                                </Flex>
+
+                                                <Flex justifyContent={'space-between'} mt={'2'}>
+                                                    <Text fontWeight={'semibold'} fontSize={'14px'}>Child (2-12 years) </Text>
+                                                    <Flex >
+                                                        <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm /> </Text>
+
+                                                        <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+
+                                                        <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm /> </Text>
+                                                    </Flex>
+                                                </Flex>
+
+                                                <Flex justifyContent={'space-between'} mt={'2'}>
+                                                    <Text fontWeight={'semibold'} fontSize={'14px'}>Child (0-2 years) </Text>
+                                                    <Flex >
+                                                        <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm /> </Text>
+
+                                                        <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+
+                                                        <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm /> </Text>
+                                                    </Flex>
+                                                </Flex>
+                                            </Box>
+
+
+                                        </Box>
+
+
+                                    </GridItem>
+                                </Grid>
+                            </TabPanel>
+                            <TabPanel>
+                                <p>two!</p>
+                            </TabPanel>
+                            <TabPanel>
+                                <p>three!</p>
+                            </TabPanel>
+                        </TabPanels>
+                    </Tabs>
+                </Box>
+            </Container>
+            {/* tabs & accordian end */}
 
         </Box>
     );

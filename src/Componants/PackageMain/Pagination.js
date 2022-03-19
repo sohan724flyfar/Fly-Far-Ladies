@@ -28,7 +28,7 @@ const Pagination = () => {
     };
     return (
         <Flex
-            bg={'white'}
+
             p={50}
             w="full"
             alignItems="center"

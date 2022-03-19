@@ -175,7 +175,7 @@ function Home() {
                                 </Box>
 
                                 <Box mt={'3'} >
-                                    <Button _hover={{ 'backgroundColor': 'white', 'color': 'black', 'border': '1px solid #FE94A2' }} sx={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} >Read More</Button>
+                                    <Button _hover={{ 'backgroundColor': 'white', 'color': 'black', 'border': '1px solid #FE94A2' }} sx={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} >View Jobs</Button>
 
                                 </Box>
                             </GridItem>

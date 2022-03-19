@@ -30,6 +30,7 @@ import {
     Text,
     Switch,
     InputRightElement,
+    Link,
 
 } from "@chakra-ui/react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
@@ -44,7 +45,16 @@ export default function Navbar() {
     const { isOpen: isSignupOpen, onOpen: onSignupOpen, onClose: onSignupClose } = useDisclosure();
     const { isOpen: isSigninOpen, onOpen: onSigninOpen, onClose: onSigninClose } = useDisclosure()
     const [show, setShow] = React.useState(false)
-    const handleClick = () => setShow(!show)
+    const handleClick = () => setShow(!show);
+    const handleOpenSignup = () => {
+        onSigninClose();
+        onSignupOpen();
+    }
+    const handleOpenSignin = () => {
+        onSignupClose();
+        onSigninOpen();
+    }
+
     return (
 
         <Container Container maxWidth={'container.2xl'} >
@@ -84,7 +94,20 @@ export default function Navbar() {
                                 display={{ base: "none", md: "flex" }}
                                 ml={'auto'}
                             >
-                                <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Home</Button>
+                            
+
+                                <Menu>
+                                    <MenuButton _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} as={Button} rightIcon={<ChevronDownIcon />}>
+                                        Service
+                                    </MenuButton>
+                                    <MenuList>
+                                        <MenuItem>Download</MenuItem>
+                                        <MenuItem>Create a Copy</MenuItem>
+                                        <MenuItem>Mark as Draft</MenuItem>
+                                        <MenuItem>Delete</MenuItem>
+                                        <MenuItem>Attend a Workshop</MenuItem>
+                                    </MenuList>
+                                </Menu>
 
                                 <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Trips</Button>
 
@@ -104,7 +127,9 @@ export default function Navbar() {
                                         <MenuItem>Attend a Workshop</MenuItem>
                                     </MenuList>
                                 </Menu>
-                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} bg={'white'} bgColor={'transparent'} border={'1px solid #FE94A2'} onClick={onSigninOpen} >Sign in</Button>
+                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} onClick={onSigninOpen} >Sign in</Button>
+
+
 
                                 <Modal isOpen={isSigninOpen} onClose={onSigninClose}>
                                     <ModalOverlay />
@@ -147,14 +172,15 @@ export default function Navbar() {
                                                 </Flex>
                                                 <Text fontWeight={'bold'}>Forgot Password</Text>
                                             </Flex>
-                                            <Text mt={'6'} fontSize={'12px'}>You Don't Have Account? <a href="" >Sign Up</a></Text>
+                                            <Text mt={'6'} fontSize={'12px'}>You Don't Have Account? <Text as={'button'} fontSize={'14px'} fontWeight={'semibold'} onClick={handleOpenSignup}>Sign Up</Text> </Text>
+
                                         </ModalBody>
 
 
                                     </ModalContent>
                                 </Modal>
 
-                                <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} onClick={onSignupOpen} >Sign Up</Button>
+
 
                                 <Modal isOpen={isSignupOpen} onClose={onSignupClose}>
                                     <ModalOverlay />
@@ -213,7 +239,7 @@ export default function Navbar() {
                                             <Box mt={'6'}>
                                                 <Button w={'90%'} _focus={{ 'outline': 'none', }} _hover={{ 'color': '#FE94A2', 'bg': 'white' }} color={'white'} bgColor={'#FE94A2'} border={'2px solid #FE94A2'}  >Sign up</Button>
                                             </Box>
-                                            <Text mt={'6'} fontSize={'12px'}>You Have An Account? <a href="">Sign In</a></Text>
+                                            <Text mt={'6'} fontSize={'12px'}>You Have An Account? <Text as={'button'} fontSize={'14px'} fontWeight={'semibold'} onClick={handleOpenSignin}>Sign In</Text>  </Text>
 
 
                                             <Text mt={'6'} fontSize={'10px'}>You Have An Account? <a href="">This site is protected by reCAPTCHA and the <span color="red" >Google Privacy Policy</span> and Terms of Service apply.</a></Text>
