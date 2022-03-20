@@ -105,7 +105,7 @@ export default function Navbar() {
                                             <MenuButton _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} as={Button} rightIcon={<ChevronDownIcon />}>
                                                 Service
                                             </MenuButton>
-                                            <MenuList>
+                                            <MenuList >
                                                 <NavLink to="/package"><MenuItem>All Package</MenuItem></NavLink>
                                                 <MenuItem>Create a Copy</MenuItem>
                                                 <MenuItem>Mark as Draft</MenuItem>

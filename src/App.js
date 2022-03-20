@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import './App.css';
+import BookingDetails from './Componants/BookingDetails/BookingDetails';
 import Home from './Componants/Home/Home';
 import MultipleSlider from './Componants/PackageDetails/MultipleSlider';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
@@ -39,7 +40,8 @@ function App() {
 
 
           <Route path="/package" >
-            <PackageMain />
+            <BookingDetails />
+            {/* <PackageMain /> */}
           </Route>
 
           <Route path="/packageDetails" >

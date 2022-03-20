@@ -1,5 +1,5 @@
 import { Box, Button, Checkbox, Container, Flex, Grid, GridItem, Select, Slider, SliderFilledTrack, SliderThumb, SliderTrack, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { HiOutlineMinusSm, HiOutlinePlusSm } from 'react-icons/hi';
 import Navbar from '../Navbar/Navbar';
 import Accordian from './Accordian';
@@ -16,6 +16,50 @@ import Footer from '../Footer/Footer';
 import './packageDetails.css'
 
 const PackageDetails = () => {
+    const [numOfAdult, setNumOfAdult] = useState(0);
+    const [numOfChild2_12, setNumOfChild2_12] = useState(0);
+    const [numOfChild0_2, setNumOfChild0_2] = useState(0);
+    const [totalPassenger, setTotalPassenger] = useState(0);
+    const [totalAmount, setTotalAmount] = useState(0);
+
+    const handleChange = (sign, pType) => {
+        if (pType === 'adult') {
+            if (sign === 'plus') {
+                setNumOfAdult(numOfAdult + 1);
+            }
+            else if (numOfAdult > 0) {
+                setNumOfAdult(numOfAdult - 1);
+            }
+        }
+        else if (pType === 'child0_2') {
+            if (sign === 'plus') {
+                setNumOfChild0_2(numOfChild0_2 + 1);
+            }
+            else if (numOfChild0_2 > 0) {
+                setNumOfChild0_2(numOfChild0_2 - 1);
+            }
+        }
+
+        else {
+            if (sign === 'plus') {
+                setNumOfChild2_12(numOfChild2_12 + 1);
+            }
+            else if (numOfChild2_12 > 0) {
+                setNumOfChild2_12(numOfChild2_12 - 1);
+            }
+        }
+
+        if (sign === 'plus') {
+            setTotalPassenger(totalPassenger + 1);
+            setTotalAmount(totalAmount + 3258);
+        }
+        else if (totalPassenger > 0) {
+            setTotalPassenger(totalPassenger - 1);
+            setTotalAmount(totalAmount - 3258);
+        }
+
+
+    }
     return (
         <Box>
             {/* navbar */}
@@ -160,12 +204,12 @@ const PackageDetails = () => {
                 {/* tabs & accordian start */}
                 <Container maxW={'container.xl'} mt={'10'} bg={'white'} >
                     <Box border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2; '} rounded={'md'} p={'2'} >
-                        <Tabs>
+                        <Tabs colorScheme={'brand'}>
                             <TabList>
-                                <Tab  >Details</Tab>
-                                <Tab  >Booking Policy</Tab>
-                                <Tab  >Refund Policy</Tab>
-                                <Tab >Trems And Conditions</Tab>
+                                <Tab _focus={{ outline: 'none', }} >Details</Tab>
+                                <Tab _focus={{ outline: 'none', }} >Booking Policy</Tab>
+                                <Tab _focus={{ outline: 'none', }} >Refund Policy</Tab>
+                                <Tab _focus={{ outline: 'none', }} >Trems And Conditions</Tab>
                             </TabList>
 
                             <TabPanels>
@@ -197,33 +241,33 @@ const PackageDetails = () => {
                                                     <Flex justifyContent={'space-between'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Adult</Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} onClick={() => { handleChange('minus', 'adult') }} p={'1'} bg={'#FE94A2'} cursor={'pointer'}>  <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={'8'} textAlign={'center'} fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfAdult} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'adult') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (2-12 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child2-12') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild2_12} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child2-12') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (0-2 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child0_2') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild0_2} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child0_2') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
                                                 </Box>
@@ -232,14 +276,14 @@ const PackageDetails = () => {
                                                     <Text fontWeight={'semibold'}>Total Passenger</Text>
 
                                                     <Box px={'10'} border={'1px  solid #FE94A2'} rounded={'md'}>
-                                                        <Text >6</Text>
+                                                        <Text >{totalPassenger}</Text>
                                                     </Box>
 
                                                 </Flex>
 
                                                 <Box w={'80%'} mx={'auto'} mt={'3'} >
                                                     <Text>Your Total Amount</Text>
-                                                    <Text fontWeight={'semibold'}>BDT 3,258</Text>
+                                                    <Text fontWeight={'semibold'}>BDT {totalAmount}</Text>
                                                 </Box>
 
                                                 <Box mt={'2'}>
@@ -271,33 +315,33 @@ const PackageDetails = () => {
                                                     <Flex justifyContent={'space-between'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Adult</Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} onClick={() => { handleChange('minus', 'adult') }} p={'1'} bg={'#FE94A2'} cursor={'pointer'}>  <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={'8'} textAlign={'center'} fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfAdult} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'adult') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (2-12 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child2-12') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild2_12} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child2-12') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (0-2 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child0_2') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild0_2} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child0_2') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
                                                 </Box>
@@ -306,14 +350,14 @@ const PackageDetails = () => {
                                                     <Text fontWeight={'semibold'}>Total Passenger</Text>
 
                                                     <Box px={'10'} border={'1px  solid #FE94A2'} rounded={'md'}>
-                                                        <Text >6</Text>
+                                                        <Text >{totalPassenger}</Text>
                                                     </Box>
 
                                                 </Flex>
 
                                                 <Box w={'80%'} mx={'auto'} mt={'3'} >
                                                     <Text>Your Total Amount</Text>
-                                                    <Text fontWeight={'semibold'}>BDT 3,258</Text>
+                                                    <Text fontWeight={'semibold'}>BDT {totalAmount}</Text>
                                                 </Box>
 
                                                 <Box mt={'2'}>
@@ -345,33 +389,33 @@ const PackageDetails = () => {
                                                     <Flex justifyContent={'space-between'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Adult</Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} onClick={() => { handleChange('minus', 'adult') }} p={'1'} bg={'#FE94A2'} cursor={'pointer'}>  <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={'8'} textAlign={'center'} fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfAdult} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'adult') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (2-12 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child2-12') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild2_12} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child2-12') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (0-2 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child0_2') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild0_2} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child0_2') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
                                                 </Box>
@@ -380,14 +424,14 @@ const PackageDetails = () => {
                                                     <Text fontWeight={'semibold'}>Total Passenger</Text>
 
                                                     <Box px={'10'} border={'1px  solid #FE94A2'} rounded={'md'}>
-                                                        <Text >6</Text>
+                                                        <Text >{totalPassenger}</Text>
                                                     </Box>
 
                                                 </Flex>
 
                                                 <Box w={'80%'} mx={'auto'} mt={'3'} >
                                                     <Text>Your Total Amount</Text>
-                                                    <Text fontWeight={'semibold'}>BDT 3,258</Text>
+                                                    <Text fontWeight={'semibold'}>BDT {totalAmount}</Text>
                                                 </Box>
 
                                                 <Box mt={'2'}>
@@ -410,7 +454,7 @@ const PackageDetails = () => {
                                         </GridItem>
 
                                         <GridItem>
-                                            <Box p={'3'} textAlign={'center'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2;'}>
+                                            <Box p={'3'} textAlign={'center'} border={'1px  solid #FE94A2'} shadow={'0px 0px 2px #FE94A2;'} rounded={'md'}>
 
 
                                                 <Text fontWeight={'semibold'} >Number Of Passenger</Text>
@@ -419,33 +463,33 @@ const PackageDetails = () => {
                                                     <Flex justifyContent={'space-between'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Adult</Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} onClick={() => { handleChange('minus', 'adult') }} p={'1'} bg={'#FE94A2'} cursor={'pointer'}>  <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={'8'} textAlign={'center'} fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfAdult} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'adult') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (2-12 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child2-12') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild2_12} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child2-12') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
 
                                                     <Flex justifyContent={'space-between'} mt={'2'}>
                                                         <Text fontWeight={'semibold'} fontSize={'14px'}>Child (0-2 years) </Text>
                                                         <Flex >
-                                                            <Text p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlineMinusSm color='white' /> </Text>
+                                                            <Text as={'button'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('minus', 'child0_2') }}> <HiOutlineMinusSm color='white' /> </Text>
 
-                                                            <Text fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> 2 </Text>
+                                                            <Text w={8} textAlign='center' fontWeight={'semibold'} fontSize={'14px'} ms={'2'}> {numOfChild0_2} </Text>
 
-                                                            <Text ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'}> <HiOutlinePlusSm color='white' /> </Text>
+                                                            <Text as={'button'} ms={'2'} p={'1'} bg={'#FE94A2'} cursor={'pointer'} onClick={() => { handleChange('plus', 'child0_2') }}> <HiOutlinePlusSm color='white' /> </Text>
                                                         </Flex>
                                                     </Flex>
                                                 </Box>
@@ -454,14 +498,14 @@ const PackageDetails = () => {
                                                     <Text fontWeight={'semibold'}>Total Passenger</Text>
 
                                                     <Box px={'10'} border={'1px  solid #FE94A2'} rounded={'md'}>
-                                                        <Text >6</Text>
+                                                        <Text >{totalPassenger}</Text>
                                                     </Box>
 
                                                 </Flex>
 
                                                 <Box w={'80%'} mx={'auto'} mt={'3'} >
                                                     <Text>Your Total Amount</Text>
-                                                    <Text fontWeight={'semibold'}>BDT 3,258</Text>
+                                                    <Text fontWeight={'semibold'}>BDT {totalAmount}</Text>
                                                 </Box>
 
                                                 <Box mt={'2'}>
