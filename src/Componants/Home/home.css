@@ -32,3 +32,10 @@ filter: blur(25px);
 .slick-dots li button:before{
     display: none;
 }
+
+
+/*air ticket search */
+.sdp {
+    --theme-color: #FE94A2 !important;
+    width: 100% !important;
+}

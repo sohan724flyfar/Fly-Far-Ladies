@@ -40,8 +40,8 @@ function App() {
 
 
           <Route path="/package" >
-            <BookingDetails />
-            {/* <PackageMain /> */}
+            {/* <BookingDetails /> */}
+            <PackageMain />
           </Route>
 
           <Route path="/packageDetails" >

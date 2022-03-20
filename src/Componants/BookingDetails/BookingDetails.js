@@ -76,17 +76,17 @@ const BookingDetails = () => {
                                             <Text fontSize={'16px'}>BDT 25634</Text>
                                         </Flex>
 
-                                        <Text mt={'2'} fontSize={'12px'} color={'#FE94A2'}>Discount : 0</Text>
+                                        <Text mt={'2'} fontSize={'16px'} color={'#FE94A2'}>Discount : 0</Text>
 
-                                        <Text mt={'1'} fontSize={'12px'} color={'#FE94A2'}>Vat 10% : (learn Detail)</Text>
-                                        <Text mt={'1'} fontSize={'12px'} color={'#FE94A2'}>Tax 10% : (learn Detail)</Text>
+                                        <Text mt={'1'} fontSize={'16px'} color={'#FE94A2'}>Vat 10% : (learn Detail)</Text>
+                                        <Text mt={'1'} fontSize={'16px'} color={'#FE94A2'}>Tax 10% : (learn Detail)</Text>
                                     </Box>
                                     <Flex fontWeight={'semibold'} justifyContent={'space-between'} bg={'#FE94A2'} px={'4'} py={'1'}>
                                         <Flex>
                                             <Text color={'white'}>You pay</Text>
                                             <Box ms={'2'}>
-                                                <Text fontSize={'12px'}>(For 7 travelers)</Text>
-                                                <Text textAlign={'center'} color={'white'} fontSize={'8px'}>Including Vat & Tax</Text>
+                                                <Text fontSize={'14px'}>(For 7 travelers)</Text>
+                                                <Text textAlign={'center'} color={'white'} fontSize={'10px'}>Including Vat & Tax</Text>
                                             </Box>
                                         </Flex>
                                         <Box>
@@ -108,7 +108,7 @@ const BookingDetails = () => {
                             <GridItem w={'90%'} mt={'10'}>
                                 <Details2 age={'24'} email={'1234@gmail.com'} />
 
-                                <Box mt={'10'}>
+                                <Box mt={'12'}>
                                     <Details2 age={'25'} email={'1234@gmail.com'} />
                                 </Box>
 
@@ -122,40 +122,40 @@ const BookingDetails = () => {
 
                                 <Box mt={'6'}>
 
-                                    <Text color={'#FE94A2'} fontSize={'14px'} >You can Book with minimum amount </Text>
+                                    <Text color={'#FE94A2'} fontSize={'16px'} >You can Book with minimum amount </Text>
                                     <Box mt={'2'} p={'4'} border={'1px solid #FE94A2'} fontWeight={'semibold'}>
                                         <Flex alignItems={'center'} justifyContent={'space-between'} >
-                                            <Text fontSize={'12px'}>Minimum Payment</Text>
-                                            <Text fontSize={'12px'}>BDT 25634</Text>
+                                            <Text fontSize={'16px'}>Minimum Payment</Text>
+                                            <Text fontSize={'16px'}>BDT 25634</Text>
                                         </Flex>
 
                                         <Flex mt={'2'} alignItems={'center'} justifyContent={'space-between'} >
                                             <Box>
-                                                <Text fontSize={'12px'}>Second Payment</Text>
-                                                <Text fontSize={'8px'} color={'#FE94A2'}>Deadline Before 25 june</Text>
+                                                <Text fontSize={'16px'}>Second Payment</Text>
+                                                <Text fontSize={'10px'} color={'#FE94A2'}>Deadline Before 25 june</Text>
                                             </Box>
-                                            <Text fontSize={'12px'}>BDT 25634</Text>
+                                            <Text fontSize={'16px'}>BDT 25634</Text>
                                         </Flex>
 
                                         <Flex mt={'2'} alignItems={'center'} justifyContent={'space-between'} >
                                             <Box>
-                                                <Text fontSize={'12px'}>Third Payment</Text>
-                                                <Text fontSize={'8px'} color={'#FE94A2'}>Deadline Before 25 june</Text>
+                                                <Text fontSize={'16px'}>Third Payment</Text>
+                                                <Text fontSize={'12px'} color={'#FE94A2'}>Deadline Before 25 june</Text>
                                             </Box>
-                                            <Text fontSize={'12px'}>BDT 25634</Text>
+                                            <Text fontSize={'16px'}>BDT 25634</Text>
                                         </Flex>
 
-                                        <Text mt={'2'} fontSize={'12px'} color={'#FE94A2'}>Payment Deadline Before 22 june </Text>
+                                        <Text mt={'2'} fontSize={'16px'} color={'#FE94A2'}>Payment Deadline Before 22 june </Text>
 
-                                        <Text mt={'1'} fontSize={'10px'} color={'#FE94A2'}>Vat 10% : (learn Detail)</Text>
-                                        <Text mt={'1'} fontSize={'12px'} color={'#FE94A2'}>Tax 10% : (learn Detail)</Text>
+                                        <Text mt={'1'} fontSize={'16px'} color={'#FE94A2'}>Vat 10% : (learn Detail)</Text>
+                                        <Text mt={'1'} fontSize={'16px'} color={'#FE94A2'}>Tax 10% : (learn Detail)</Text>
                                     </Box>
                                     <Flex fontWeight={'semibold'} justifyContent={'space-between'} bg={'#FE94A2'} px={'4'} py={'1'}>
                                         <Flex>
                                             <Text color={'white'}>You pay</Text>
                                             <Box ms={'2'}>
-                                                <Text fontSize={'10px'}>(For 7 travelers)</Text>
-                                                <Text textAlign={'center'} color={'white'} fontSize={'6px'}>Including Vat & Tax</Text>
+                                                <Text fontSize={'12px'}>(For 7 travelers)</Text>
+                                                <Text textAlign={'center'} color={'white'} fontSize={'8px'}>Including Vat & Tax</Text>
                                             </Box>
                                         </Flex>
                                         <Box>

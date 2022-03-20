@@ -27,6 +27,7 @@ import StockImageSlider2 from './StockImageSlider2';
 import MediaSlider from './MediaSlider';
 import ClientsSlider from './ClientsSlider';
 import Footer from '../Footer/Footer';
+import Search from './Search';
 
 function Home() {
 
@@ -132,6 +133,12 @@ function Home() {
 
             </Container>
             {/* Banner design End */}
+
+            {/* search section start */}
+            <Box mt={'32'}>
+                <Search />
+            </Box>
+            {/* search section end */}
 
 
             {/* Tours-packgae started */}
