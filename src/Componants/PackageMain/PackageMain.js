@@ -68,7 +68,7 @@ const PackageMain = () => {
                                     </Flex>
 
                                     <Text mt={4} fontWeight={'medium'}>Select Favorite Month</Text>
-                                    {/* fieldset missing */}
+
                                     <fieldset mt={3} >
                                         <legend>Month</legend>
                                         <Select mt={'-2'} border='none' _focus={{ border: 'none' }} _hover={{ border: 'none' }} placeholder='January'>

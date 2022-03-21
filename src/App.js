@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import './App.css';
 import BookingDetails from './Componants/BookingDetails/BookingDetails';
+import BookingInput from './Componants/BookingInput/BookingInput';
 import Home from './Componants/Home/Home';
 import MultipleSlider from './Componants/PackageDetails/MultipleSlider';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
@@ -41,7 +42,8 @@ function App() {
 
           <Route path="/package" >
             {/* <BookingDetails /> */}
-            <PackageMain />
+            {/* <PackageMain /> */}
+            <BookingInput />
           </Route>
 
           <Route path="/packageDetails" >
