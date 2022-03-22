@@ -42,10 +42,8 @@ function App() {
 
 
           <Route path="/package" >
-
-            <PackageMain />
-            {/* <BookingInput /> */}
-            {/* <StockImageDetail /> */}
+            {/* <PackageMain /> */}
+            <StockImageDetail />
           </Route>
 
           <Route path="/bookingInput" >
