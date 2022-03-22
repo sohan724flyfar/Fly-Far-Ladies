@@ -4,7 +4,8 @@ import location from '../../images/location1.png'
 import person from '../../images/persons.png'
 import personClock from '../../images/personclock.png'
 import cancel from '../../images/cancel.png'
-import { NavLink } from 'react-router-dom';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const FullPackage = (props) => {
 
@@ -28,7 +29,10 @@ const FullPackage = (props) => {
                 </Box>
 
                 <Box maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }} ms={'6'}>
-                    <Text fontSize={'lg'} fontWeight={'semibold'} >Haritage Resort- Maldives</Text>
+                    <Flex justifyContent={'space-between'}>
+                        <Text fontSize={'lg'} fontWeight={'semibold'} >Haritage Resort- Maldives</Text>
+                        <Link to="/packageDetails"> <Flex alignItems={'center'} fontWeight={'semibold'}>View Details <HiOutlineArrowNarrowRight /></Flex></Link>
+                    </Flex>
                     <Flex mt={'2'} alignItems={'center'}>
                         <Image src={location} />
                         <Text fontSize={'12px'} ms={'2'}>Male. Maldives</Text>
@@ -54,9 +58,9 @@ const FullPackage = (props) => {
                             <Text color={'#FE94A2'} fontWeight={'semibold'} me={'3'}>BDT 35200</Text>
                             (Per person)
                         </Flex>
-                        <NavLink to="/packageDetails">
+                        <Link to="/bookingInput">
                             <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'}  >Book Now</Button>
-                        </NavLink>
+                        </Link>
 
 
                     </Flex>

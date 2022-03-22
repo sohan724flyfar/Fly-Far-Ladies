@@ -14,6 +14,7 @@ import tips from '../../images/tips.png'
 import PackageSlider from '../Home/PackageSlider';
 import Footer from '../Footer/Footer';
 import './packageDetails.css'
+import { Link } from 'react-router-dom';
 
 const PackageDetails = () => {
     const [numOfAdult, setNumOfAdult] = useState(0);
@@ -290,7 +291,11 @@ const PackageDetails = () => {
                                                     <Flex fontSize={'15px'}>You Can Book With Minimum Amount <Text ms={'1'} color={'#FE94A2'} fontWeight={'semibold'} >BDT 12567</Text> </Flex>
                                                 </Box>
 
-                                                <Button w={'100%'} mt={'3'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Check Out</Button>
+                                                <Link to="/bookingInput">
+                                                    <Button w={'100%'} mt={'3'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Check Out</Button>
+                                                </Link>
+
+
 
 
                                             </Box>

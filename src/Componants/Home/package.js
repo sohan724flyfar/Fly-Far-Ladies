@@ -4,10 +4,12 @@ import secnery from '../../images/Scenery2.png'
 import location2 from '../../images/location1.png'
 import clock from '../../images/clock.png'
 import wishlist from '../../images/wishlist.png'
+import { NavLink } from 'react-router-dom';
 
 const Package = () => {
     return (
         <Box>
+
             <Flex
                 shadow="0px 0px 3px rgba(245, 153, 166, 0.85);"
                 rounded="lg"
@@ -65,6 +67,7 @@ const Package = () => {
                     </Box>
                 </Box>
             </Flex>
+
         </Box>
     );
 };

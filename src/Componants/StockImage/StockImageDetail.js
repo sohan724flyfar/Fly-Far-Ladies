@@ -1,4 +1,4 @@
-import { Box, Conatiner, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 
@@ -21,6 +21,10 @@ const StockImageDetail = () => {
                 </Flex>
 
                 <Text textAlign={'center'} w={'40%'} mx={'auto'} color={'white'}>You can find the best pakage from here and select it and travel around the wrold! </Text>
+
+                <Box bg={'white'} p={'3'}>
+
+                </Box>
             </Box>
         </Box>
     );

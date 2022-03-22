@@ -42,16 +42,25 @@ function App() {
 
 
           <Route path="/package" >
-            {/* <BookingDetails /> */}
-            {/* <PackageMain /> */}
+
+            <PackageMain />
             {/* <BookingInput /> */}
-            <StockImageDetail />
+            {/* <StockImageDetail /> */}
           </Route>
+
+          <Route path="/bookingInput" >
+            <BookingInput />
+
+          </Route>
+
 
           <Route path="/packageDetails" >
             <PackageDetails />
           </Route>
 
+          <Route path="/BookingDetails" >
+            <BookingDetails />
+          </Route>
 
 
         </Switch>

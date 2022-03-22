@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Input, InputGroup, InputLeftAddon, Select, Text } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PassengerInfo from './PassengerInfo';
 
 const TravellerDetails = () => {
@@ -85,9 +86,9 @@ const TravellerDetails = () => {
 
             </Box>
 
-            <Box>
+            <Link to="/BookingDetails">
                 <Button w={'100%'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} borderRadius={'none'}>Continue</Button>
-            </Box>
+            </Link>
         </Box>
     );
 };
