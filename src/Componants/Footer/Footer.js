@@ -22,7 +22,7 @@ const Footer = () => {
                     <Container mt={'32'} maxW={'container.xl'} >
                         <Grid templateColumns={'3fr 3fr 3fr 3fr'}>
                             <GridItem>
-                                <Image w={'26'} src={logo} />
+                                <Image w={'30'} src={logo} />
                                 <Flex mt={'2'} >
                                     <Image src={footer1} />
                                     <Image ms={'2'} src={footer2} />

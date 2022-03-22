@@ -116,8 +116,10 @@ export default function Navbar() {
 
 
 
-
-                                        <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Stock Photos</Button>
+                                        <NavLink to="/stockphotos">
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Stock Photos</Button>
+                                        </NavLink>
+                                        
 
 
                                         <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Jobs </Button>

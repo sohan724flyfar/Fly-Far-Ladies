@@ -6,7 +6,6 @@ import './App.css';
 import BookingDetails from './Componants/BookingDetails/BookingDetails';
 import BookingInput from './Componants/BookingInput/BookingInput';
 import Home from './Componants/Home/Home';
-import MultipleSlider from './Componants/PackageDetails/MultipleSlider';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
 import PackageMain from './Componants/PackageMain/PackageMain';
 import StockImageDetail from './Componants/StockImage/StockImageDetail';
@@ -42,7 +41,11 @@ function App() {
 
 
           <Route path="/package" >
-            {/* <PackageMain /> */}
+            <PackageMain />
+            {/* <StockImageDetail /> */}
+          </Route>
+
+          <Route path="/stockphotos" >
             <StockImageDetail />
           </Route>
 
