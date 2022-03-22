@@ -9,6 +9,7 @@ import Home from './Componants/Home/Home';
 import MultipleSlider from './Componants/PackageDetails/MultipleSlider';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
 import PackageMain from './Componants/PackageMain/PackageMain';
+import StockImageDetail from './Componants/StockImage/StockImageDetail';
 
 const theme = extendTheme({
   colors: {
@@ -43,7 +44,8 @@ function App() {
           <Route path="/package" >
             {/* <BookingDetails /> */}
             {/* <PackageMain /> */}
-            <BookingInput />
+            {/* <BookingInput /> */}
+            <StockImageDetail />
           </Route>
 
           <Route path="/packageDetails" >

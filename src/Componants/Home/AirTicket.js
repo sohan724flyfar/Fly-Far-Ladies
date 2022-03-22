@@ -38,8 +38,9 @@ const AirTicket = () => {
     }, [])
 
     return (
-        <Box>
+        <Box p={'5'}>
             <RadioGroup
+                mt={'8'}
                 onChange={setTripType}
                 value={tripType}
                 colorScheme='brand'>
@@ -75,7 +76,7 @@ const AirTicket = () => {
                                         color: '#FE94A2'
                                     }} />
 
-                                <Input h='14' rounded='xl' pl='10' fontWeight='semibold' color='brand.100'
+                                <Input h='14' rounded='xl' pl='10' fontWeight='semibold'
                                     border='1px' borderColor='brand.100'
                                     _focus={{ border: '1px solid #FE94A2', outline: 'none' }}
                                     _hover={{ border: '1px solid #FE94A2', outline: 'none' }} ref={tripFromEl} defaultValue="Dhaka (Dac)" list='airportsList' />
@@ -93,7 +94,7 @@ const AirTicket = () => {
                                         color: '#FE94A2'
                                     }} />
 
-                                <Input h='14' rounded='xl' pl='10' fontWeight='semibold' color='brand.100'
+                                <Input h='14' rounded='xl' pl='10' fontWeight='semibold'
                                     border='1px' borderColor='brand.100'
                                     _focus={{ border: '1px solid #FE94A2', outline: 'none' }}
                                     _hover={{ border: '1px solid #FE94A2', outline: 'none' }} ref={tripToEl} defaultValue="Chottogram (Ctg)" list='airportsList' />

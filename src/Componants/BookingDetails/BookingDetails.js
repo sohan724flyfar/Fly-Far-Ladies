@@ -67,7 +67,7 @@ const BookingDetails = () => {
                                         </Flex>
 
                                         <Flex mt={'2'} alignItems={'center'} justifyContent={'space-between'} >
-                                            <Text fontSize={'16px'}>Chiled(1025x2)</Text>
+                                            <Text fontSize={'16px'}>Child(1025x2)</Text>
                                             <Text fontSize={'16px'}>BDT 25634</Text>
                                         </Flex>
 

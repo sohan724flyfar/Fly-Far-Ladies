@@ -11,7 +11,7 @@ const Search = () => {
             <Box>
                 <Tabs defaultIndex={1} colorScheme='brand' pos='relative' pt='10'>
 
-                    <TabList w={{ md: 'xl' }} mx='auto' bg='white' shadow='sm' pos='absolute' rounded='lg' top='1' sx={{ left: '50%', transform: 'translateX(-50%)' }}>
+                    <TabList w={{ md: 'xl' }} mx='auto' bg='white' shadow='sm' pos='absolute' rounded='lg' top='-2' sx={{ left: '50%', transform: 'translateX(-50%)' }} p={'5'}>
                         <Tab fontWeight='semibold' sx={{ width: '25%' }}><FiPackage style={{ fontSize: "20px", marginRight: '5px', color: "#FE94A2" }} /> Package</Tab>
 
                         <Tab fontWeight='semibold' sx={{ width: '25%' }}><IoTicketOutline style={{ fontSize: "20px", marginRight: '5px', color: "#FE94A2" }} /> Air Ticket</Tab>

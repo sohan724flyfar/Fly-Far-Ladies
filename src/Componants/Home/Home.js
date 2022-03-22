@@ -273,7 +273,7 @@ function Home() {
                         <GridItem>
                             <Recent2 img={blog1} />
                         </GridItem>
-                        <GridItem ms={'5'}>
+                        <GridItem ms={'5'} me={'5'}>
                             <Recent2 img={secnery} />
                         </GridItem>
                     </Grid>
