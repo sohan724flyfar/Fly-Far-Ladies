@@ -11,7 +11,7 @@ const Search = () => {
             <Box>
                 <Tabs defaultIndex={1} colorScheme='brand' pos='relative' pt='10'>
 
-                    <TabList w={{ md: 'xl' }} mx='auto' bg='white' shadow='sm' pos='absolute' rounded='lg' top='-2' sx={{ left: '50%', transform: 'translateX(-50%)' }} p={'5'}>
+                    <TabList w={{ md: 'xl' }} mx='auto' bg='white' shadow='sm' pos='absolute' rounded='lg' top='-0.5' sx={{ left: '50%', transform: 'translateX(-50%)' }} p={'3'}>
                         <Tab fontWeight='semibold' sx={{ width: '25%' }}><FiPackage style={{ fontSize: "20px", marginRight: '5px', color: "#FE94A2" }} /> Package</Tab>
 
                         <Tab fontWeight='semibold' sx={{ width: '25%' }}><IoTicketOutline style={{ fontSize: "20px", marginRight: '5px', color: "#FE94A2" }} /> Air Ticket</Tab>
@@ -42,10 +42,13 @@ const Search = () => {
 
                     </TabPanels>
                     <Button pos='absolute'
-                        colorScheme='brand' w='28' rounded='full'
+
+                        colorScheme='brand' rounded='full'
                         aria-label='Search database'
                         sx={{ left: '50%', transform: 'translate(-50%)', bottom: '-18px' }}
                         leftIcon={<FiSearch style={{ fontSize: '20px' }} />}
+                        w={'40'}
+                        py={'6'}
                     >Search</Button>
                 </Tabs>
             </Box>

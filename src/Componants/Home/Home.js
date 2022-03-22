@@ -28,6 +28,8 @@ import MediaSlider from './MediaSlider';
 import ClientsSlider from './ClientsSlider';
 import Footer from '../Footer/Footer';
 import Search from './Search';
+import { NavLink } from 'react-router-dom';
+
 
 function Home() {
 
@@ -205,7 +207,7 @@ function Home() {
 
                     <Box >
                         <Container maxW={'container.xl'}  >
-                            <Flex pe={10} justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+                            <NavLink to="/stockphotos" ><Flex pe={10} justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex></NavLink>
                         </Container>
                     </Box>
                 </Box>

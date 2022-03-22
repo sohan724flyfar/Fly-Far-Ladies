@@ -116,10 +116,11 @@ export default function Navbar() {
 
 
 
+
                                         <NavLink to="/stockphotos">
                                             <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Stock Photos</Button>
                                         </NavLink>
-                                        
+
 
 
                                         <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Jobs </Button>
@@ -254,10 +255,11 @@ export default function Navbar() {
                                             </ModalContent>
                                         </Modal>
 
-                                    </HStack>
+                                    </HStack >
 
                                     {/* Mobile nav */}
-                                    <Box display={{ base: "inline-flex", md: "none" }}>
+                                    <Box Box display={{ base: "inline-flex", md: "none" }
+                                    }>
                                         <IconButton
                                             display={{ base: "flex", md: "none" }}
                                             aria-label="Open menu"
@@ -301,13 +303,13 @@ export default function Navbar() {
                                             <Button _focus={{ 'outline': 'none', }} _hover={{ 'backgroundColor': '#FE94A2', 'color': 'white' }} bg={'white'} bgColor={'white'} border={'1px solid #FE94A2'} >Sign in</Button>
                                             <Button _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bgColor={'#FE94A2'} color={'white'} >Sign Up</Button>
                                         </VStack>
-                                    </Box>
-                                </HStack>
-                            </Flex>
-                        </chakra.header>
-                    </React.Fragment>
+                                    </Box >
+                                </HStack >
+                            </Flex >
+                        </chakra.header >
+                    </React.Fragment >
                 </Container >
             </Box >
-        </Box>
+        </Box >
     );
 }

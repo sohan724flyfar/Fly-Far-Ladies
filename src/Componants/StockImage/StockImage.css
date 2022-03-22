@@ -1,0 +1,11 @@
+.headerbgStock{
+    background-image: url('../../images/stock_image_header_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainbgStock{
+    background-image: url('../../images/package-detailsbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,9 +1,21 @@
-import { Box, Button, Container, Flex, Image, Input, InputGroup, InputLeftElement, Radio, Text } from '@chakra-ui/react';
+import { Box, Button, Container, Flex, Grid, GridItem, Image, Radio, Text } from '@chakra-ui/react';
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import upper from '../../images/upper.svg'
 import vedioStock from '../../images/Video_Secto.webp'
 import { AiOutlineSearch } from 'react-icons/ai';
+import StockImageMain from './StockImageMain';
+import PhotosOne from '../../images/Photos1.jpg'
+import PhotosTwo from '../../images/photos2.jpg'
+import photosThree from '../../images/photos5.jpg'
+import photosFour from '../../images/photos4.jpg'
+import avatar from '../../images/avatar.png';
+import PackageSlider from '../Home/PackageSlider';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import Footer from '../Footer/Footer';
+import './StockImage.css'
+
+
 
 const StockImageDetail = () => {
     return (
@@ -12,7 +24,7 @@ const StockImageDetail = () => {
             <Navbar />
             {/* navbar start */}
 
-            <Box bg={'pink.500'} py={'20'} >
+            <Box className='headerbgStock' py={'20'} >
                 <Flex fontWeight={'bold'} justifyContent={'center'} alignItems={'center'} fontSize={'4xl'}>
                     You Can
                     <Text color={'white'} ms={'3'} me={3}> Buy</Text>
@@ -58,56 +70,145 @@ const StockImageDetail = () => {
             </Box>
 
 
-            <Box mt={'10'} w={'50%'} mx={'auto'} textAlign={'center'}>
-                <Text fontWeight={'extrabold'} fontSize={'2xl'}>Select Vedio or Photos</Text>
-                <Image w={'50%'} mx={'auto'} src={upper} />
+            <Box className='mainbgStock'>
+                <Box pt={'10'} w={'50%'} mx={'auto'} textAlign={'center'}>
+                    <Text fontWeight={'extrabold'} fontSize={'2xl'}>Select Vedio or Photos</Text>
+                    <Image w={'50%'} mx={'auto'} src={upper} />
 
-                <Flex mt={'5'} alignItems={'center'} justifyContent={'center'}>
+                    <Flex mt={'5'} alignItems={'center'} justifyContent={'center'}>
+                        <Box position={'relative'} overflow="hidden" border={'1px'} borderColor={'transparent'} borderRadius={'xl'} role="group">
+                            <Image _hover={{ transform: "scale(1.1)", transition: "all 400ms ease", filter: "grayscale(0.5)" }} borderRadius={'md'} w={'100%'} h={'250px'} cursor={'pointer'} src={vedioStock}></Image>
+
+                            <Box position={'absolute'} sx={{ bottom: "6px", left: "6px", top: "5px" }}>
+                                <Box>< Image h={'10'} width={'10'} src={avatar} /></Box>
+                            </Box>
+
+                            <Box position={'absolute'} sx={{ bottom: "5px", left: "5px" }}>
+                                <Box ms={'2'} fontWeight={'bold'} color={'white'} fontSize={'lg'}>Stock Image</Box>
+                            </Box>
+
+                        </Box>
+
+                        <Box ms={'4'} position={'relative'} overflow="hidden" border={'1px'} borderColor={'transparent'} borderRadius={'xl'} role="group">
+                            <Image _hover={{ transform: "scale(1.1)", transition: "all 400ms ease", filter: "grayscale(0.5)" }} borderRadius={'md'} w={'100%'} h={'250px'} cursor={'pointer'} src={vedioStock}></Image>
+
+                            <Box position={'absolute'} sx={{ bottom: "6px", left: "6px", top: "5px" }}>
+                                <Box>< Image h={'10'} width={'10'} src={avatar} /></Box>
+                            </Box>
+
+                            <Box position={'absolute'} sx={{ bottom: "5px", left: "5px" }}>
+                                <Box ms={'2'} fontWeight={'bold'} color={'white'} fontSize={'lg'}>Stock Image</Box>
+                            </Box>
+
+                        </Box>
+                    </Flex>
+                </Box>
+
+
+                <Container maxW={'container.xl'} mt={'20'} pb={'10'}>
+                    <Text fontSize={'xl'} fontWeight={'bold'} >Our Most Popular and Best Selling Photo And Video</Text>
+
+                    <Flex alignItems={'center'} mt={'4'} >
+                        <Text>Popular search</Text>
+                        <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
+                            <Box><AiOutlineSearch /></Box>
+                            <Box ms={'2'}>Sunset</Box>
+                        </Flex>
+
+                        <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
+                            <Box><AiOutlineSearch /></Box>
+                            <Box ms={'2'}>Women's Day</Box>
+                        </Flex>
+
+
+                        <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
+                            <Box><AiOutlineSearch /></Box>
+                            <Box ms={'2'}>Flower</Box>
+                        </Flex>
+
+
+                        <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
+                            <Box><AiOutlineSearch /></Box>
+                            <Box ms={'2'}>Spring</Box>
+                        </Flex>
+
+                        <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
+                            <Box><AiOutlineSearch /></Box>
+                            <Box ms={'2'}>Science Day</Box>
+                        </Flex>
+
+                    </Flex>
+
+
+                    <Grid templateColumns={'repeat(4,1fr)'} gap={'5'} mt={'12'}>
+                        <GridItem>
+                            <StockImageMain img={PhotosOne} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={PhotosTwo} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosThree} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosFour} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={PhotosOne} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={PhotosTwo} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosThree} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosFour} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={PhotosOne} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={PhotosTwo} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosThree} />
+                        </GridItem>
+                        <GridItem>
+                            <StockImageMain img={photosFour} />
+                        </GridItem>
+                    </Grid>
+
+                    <Box w={'10%'} mx={'auto'} mt={'5'}>
+                        <Button w={'100%'} rounded={'full'} _focus={{ 'outline': 'none', }} _hover={{ 'border': '1px', 'bgColor': '#FE94A2', 'borderColor': '#FE94A2', 'color': 'white' }} border={'1px solid #FE94A2'} Color={'#FE94A2'} bg={'white'}   >See More</Button>
+                    </Box>
+
+
                     <Box>
-                        <Image src={vedioStock} />
-                    </Box>
+                        <Box mt={'20'}>
+                            <Box textAlign={'center'}>
+                                <Text fontSize={'4xl'} fontWeight={'bold'}>Our Most Popular  <span style={{ 'color': '#FE94A2', }}>Tours</span> </Text>
 
-                    <Box ms={'5'}>
-                        <Image src={vedioStock} />
+                                <Text marginTop={'4'} color={'gray.600'}>Placeholder text commonly used to demonstrate the visual form of <br /> document or a typeface without relying on meaningful content. </Text>
+                            </Box>
+                            <Box >
+                                <Container maxW={'container.xl'}  >
+                                    <Flex pe={8} justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
+                                </Container>
+                            </Box>
+                        </Box>
+                        <Box mt={''}>
+                            <Container maxW={'container.xl'} mb={'56'}>
+                                <PackageSlider />
+                            </Container>
+                        </Box>
                     </Box>
-                </Flex>
+                </Container>
             </Box>
 
-
-            <Container maxW={'container.2xl'} mt={'10'}>
-                <Text fontSize={'semibold'} >Our Most Popular and Best Selling Photo And Video</Text>
-
-                <Flex alignItems={'center'}>
-                    <Text>Popular search</Text>
-                    <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
-                        <Box><AiOutlineSearch /></Box>
-                        <Box ms={'2'}>Sunset</Box>
-                    </Flex>
-
-                    <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
-                        <Box><AiOutlineSearch /></Box>
-                        <Box ms={'2'}>Sunset</Box>
-                    </Flex>
-
-
-                    <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
-                        <Box><AiOutlineSearch /></Box>
-                        <Box ms={'2'}>Sunset</Box>
-                    </Flex>
-
-
-                    <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
-                        <Box><AiOutlineSearch /></Box>
-                        <Box ms={'2'}>Sunset</Box>
-                    </Flex>
-
-                    <Flex ms={'4'} fontSize={'12px'} px={'2'} py={'1'} rounded={'full'} alignItems={'center'} border={'1px solid #FE94A2'} bg={'white'}>
-                        <Box><AiOutlineSearch /></Box>
-                        <Box ms={'2'}>Sunset</Box>
-                    </Flex>
-
-                </Flex>
-            </Container>
+            {/* Footer start */}
+            <Footer />
+            {/* Footer end */}
         </Box>
     );
 };

@@ -42,16 +42,16 @@ function App() {
 
           <Route path="/package" >
             <PackageMain />
-            {/* <StockImageDetail /> */}
           </Route>
 
           <Route path="/stockphotos" >
             <StockImageDetail />
           </Route>
 
+
+
           <Route path="/bookingInput" >
             <BookingInput />
-
           </Route>
 
 
@@ -72,6 +72,3 @@ function App() {
 
 export default App;
 
-{/* <Home /> */ }
-{/* <PackageMain /> */ }
-{/* <PackageDetails /> */ }
