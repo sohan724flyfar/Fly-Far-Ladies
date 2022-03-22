@@ -16,7 +16,7 @@ const StockImageDetail = () => {
                     and
                     <Flex>
                         <Text color={'white'} ms={'3'} me={3}>Sell</Text>
-                        Photos
+                        Photo
                     </Flex>
                 </Flex>
 
