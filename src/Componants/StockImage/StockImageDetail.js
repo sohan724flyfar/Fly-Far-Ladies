@@ -24,6 +24,8 @@ const StockImageDetail = () => {
             <Navbar />
             {/* navbar start */}
 
+
+            {/* main stock start */}
             <Box className='headerbgStock' py={'20'} >
                 <Flex fontWeight={'bold'} justifyContent={'center'} alignItems={'center'} fontSize={'4xl'}>
                     You Can
@@ -68,7 +70,6 @@ const StockImageDetail = () => {
                 </Box>
 
             </Box>
-
 
             <Box className='mainbgStock'>
                 <Box pt={'10'} w={'50%'} mx={'auto'} textAlign={'center'}>
@@ -205,6 +206,7 @@ const StockImageDetail = () => {
                     </Box>
                 </Container>
             </Box>
+            {/* main stock start */}
 
             {/* Footer start */}
             <Footer />
