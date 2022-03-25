@@ -14,6 +14,7 @@ import PackageSlider from '../Home/PackageSlider';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Footer from '../Footer/Footer';
 import './StockImage.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -141,42 +142,42 @@ const StockImageDetail = () => {
                     </Flex>
 
 
-                    <Grid templateColumns={'repeat(4,1fr)'} gap={'5'} mt={'12'}>
+                    <Grid templateColumns={'repeat(4,1fr)'} gap={'5'} mt={'5'}>
                         <GridItem>
-                            <StockImageMain img={PhotosOne} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosOne} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={PhotosTwo} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosTwo} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosThree} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosThree} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosFour} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosFour} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={PhotosOne} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosOne} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={PhotosTwo} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosTwo} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosThree} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosThree} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosFour} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosFour} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={PhotosOne} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosOne} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={PhotosTwo} />
+                            <Link to="/singleStockImage"><StockImageMain img={PhotosTwo} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosThree} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosThree} /></Link>
                         </GridItem>
                         <GridItem>
-                            <StockImageMain img={photosFour} />
+                            <Link to="/singleStockImage"><StockImageMain img={photosFour} /></Link>
                         </GridItem>
                     </Grid>
 
