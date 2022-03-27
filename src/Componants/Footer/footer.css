@@ -1,5 +1,5 @@
-.footerbg{
-    background-image: url('../../images/Footerbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+.footerbg {
+  background-image: url("../../images/Footerbg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

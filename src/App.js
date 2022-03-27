@@ -8,6 +8,7 @@ import BookingInput from './Componants/BookingInput/BookingInput';
 import Home from './Componants/Home/Home';
 import PackageDetails from './Componants/PackageDetails/PackageDetails';
 import PackageMain from './Componants/PackageMain/PackageMain';
+import SingleStockImage from './Componants/SingleStockImage/SingleStockImage';
 import StockImageDetail from './Componants/StockImage/StockImageDetail';
 
 const theme = extendTheme({
@@ -48,6 +49,10 @@ function App() {
             <StockImageDetail />
           </Route>
 
+
+          <Route path="/singleStockImage" >
+            <SingleStockImage />
+          </Route>
 
 
           <Route path="/bookingInput" >
