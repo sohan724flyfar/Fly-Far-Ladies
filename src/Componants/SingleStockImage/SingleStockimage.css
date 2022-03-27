@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 .SingleStockImage {
   background-image: url("../../images/package-detailsbg.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
-=======
-.SingleStockImage{
-    background-image: url('../../images/package-detailsbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
->>>>>>> main
