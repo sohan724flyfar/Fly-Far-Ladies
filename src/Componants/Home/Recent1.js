@@ -5,19 +5,15 @@ const Recent1 = (props) => {
     return (
 
         <Flex
-
-            p={4}
-            w="full"
-            alignItems="center"
-            justifyContent="center"
+            py={4}
         >
             <Box
                 shadow="0px 0px 9px #EFCACA;"
-                mx={{ lg: 8 }}
+
                 display={{ lg: "flex" }}
                 maxW={{ lg: "5xl" }}
                 rounded={{ lg: "lg" }}
-                p={'1'}
+
                 bg={'white'}
             >
                 <Box p={'2'} >

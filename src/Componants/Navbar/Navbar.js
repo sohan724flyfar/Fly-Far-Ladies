@@ -125,7 +125,9 @@ export default function Navbar() {
 
                                         <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Jobs </Button>
 
-                                        <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Blog </Button>
+                                        <NavLink to="/blog">
+                                            <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >Blog </Button>
+                                        </NavLink>
 
                                         <Button _focus={{ 'outline': 'none' }} _hover={{ 'border': '1px', 'bgColor': 'white', 'borderColor': '#FE94A2', 'color': '#FE94A2' }} border={'1px solid transparent'} bg={'transparent'} >About Us </Button>
 

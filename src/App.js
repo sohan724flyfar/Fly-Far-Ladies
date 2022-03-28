@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import './App.css';
+import Blog from './Componants/Blog/Blog';
 import BookingDetails from './Componants/BookingDetails/BookingDetails';
 import BookingInput from './Componants/BookingInput/BookingInput';
 import Home from './Componants/Home/Home';
@@ -54,6 +55,9 @@ function App() {
             <SingleStockImage />
           </Route>
 
+          <Route path="/blog" >
+            <Blog />
+          </Route>
 
           <Route path="/bookingInput" >
             <BookingInput />

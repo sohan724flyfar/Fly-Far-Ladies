@@ -7,8 +7,9 @@ const Recent2 = (props) => {
     return (
 
         <Flex
-            shadow="0px 0px 11px rgba(245, 153, 166, 0.85);"
+            shadow="0px 0px 9px #EFCACA;"
             rounded="lg"
+            bg={'white'}
             p={2}
             w="full"
             alignItems="center"

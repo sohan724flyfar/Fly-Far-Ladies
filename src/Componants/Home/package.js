@@ -1,5 +1,5 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import secnery from '../../images/Scenery2.png'
 import location2 from '../../images/location1.png'
 import clock from '../../images/clock.png'
@@ -7,6 +7,8 @@ import wishlist from '../../images/wishlist.png'
 import { NavLink } from 'react-router-dom';
 
 const Package = () => {
+
+
     return (
         <Box>
 

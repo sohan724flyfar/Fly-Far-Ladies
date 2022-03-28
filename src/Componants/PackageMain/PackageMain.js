@@ -162,19 +162,44 @@ const PackageMain = () => {
                         </GridItem>
 
                         <GridItem >
-                            <FullPackage bg={'white'} img={PhotosOne} /> <br />
+                            <Box>
+                                <FullPackage img={PhotosOne} />
+                            </Box>
 
-                            <FullPackage img={PhotosTwo} /> <br />
-                            <FullPackage img={photosThree} /> <br />
-                            <FullPackage img={photosFour} /> <br />
-                            <FullPackage img={PhotosOne} /> <br />
-                            <FullPackage img={PhotosTwo} /> <br />
-                            <FullPackage img={photosThree} /> <br />
-                            <FullPackage img={photosFour} /><br />
-                            <FullPackage img={PhotosTwo} /> <br />
-                            <FullPackage img={photosThree} /> <br />
+                            <Box mt={'4'}>
+                                <FullPackage img={PhotosTwo} />
+                            </Box>
 
+                            <Box mt={'4'}>
+                                <FullPackage img={photosThree} />
+                            </Box>
 
+                            <Box mt={'4'}>
+                                <FullPackage img={photosFour} />
+                            </Box>
+
+                            <Box mt={'4'}>
+                                <FullPackage img={PhotosOne} />
+                            </Box>
+
+                            <Box mt={'4'}>
+                                <FullPackage img={PhotosTwo} />
+                            </Box>
+                            <Box mt={'4'}>
+                                <FullPackage img={photosThree} />
+                            </Box>
+
+                            <Box mt={'4'}>
+                                <FullPackage img={photosFour} />
+                            </Box>
+
+                            <Box mt={'4'}>
+                                <FullPackage img={PhotosTwo} />
+                            </Box>
+
+                            <Box mt={'4'}>
+                                <FullPackage img={PhotosTwo} />
+                            </Box>
                         </GridItem>
 
 

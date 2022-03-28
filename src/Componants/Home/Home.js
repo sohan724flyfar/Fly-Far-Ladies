@@ -17,7 +17,6 @@ import Recent1 from './Recent1';
 import blog1 from '../../images/blog-1.jpeg'
 import blog2 from '../../images/blog-2.jpeg'
 import Recent2 from './Recent2';
-import Clients from './Clients';
 import qutation from '../../images/qutation.png'
 import qutation2 from '../../images/qutation2.png'
 import PackageSlider from './PackageSlider';
@@ -240,43 +239,23 @@ function Home() {
                                 <Flex justifyContent={'end'} cursor={'pointer'} alignItems={'center'} fontWeight={'bold'} > View more <Box ms={'2'} mt='0.5'><HiOutlineArrowNarrowRight /></Box></Flex>
 
                             </Box>
-                            {/* <Flex ms={'5'} justifyContent={'space-between'} >
-                                <InputGroup ms={'3'}  >
-                                    <InputLeftElement pointerEvents="none">
-                                        <AiOutlineSearch />
-                                    </InputLeftElement>
-                                    <Input bg={'white'} _hover={{ 'borderColor': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'3xl'} type="tel" placeholder=" Quick Search..." />
-                                </InputGroup>
 
-                                <Select ms={'3'} color={'white'} backgroundColor={'#FE94A2'} _hover={{ 'borderColor': '#FE94A2', 'bg': 'white', 'color': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'sm'} placeholder='Select Writer'>
-                                    <option value='option1'>Option 1</option>
-                                    <option value='option2'>Option 2</option>
-                                    <option value='option3'>Option 3</option>
-                                </Select>
-
-                                <Select ms={'3'} color={'white'} backgroundColor={'#FE94A2'} _hover={{ 'borderColor': '#FE94A2', 'bg': 'white', 'color': '#FE94A2' }} borderColor={'#FE94A2'} borderRadius={'sm'} placeholder='Select Writer'>
-                                    <option value='option1'>Option 1</option>
-                                    <option value='option2'>Option 2</option>
-                                    <option value='option3'>Option 3</option>
-                                </Select>
-
-                            </Flex> */}
                         </Flex>
                     </Box>
                 </Container>
 
-                <Container maxWidth={'container.2xl'} pe={'16'}>
-                    <Grid templateColumns={'6fr 3fr 3fr'}>
-                        <GridItem>
+                <Container maxWidth={'container.xl'}>
+                    <Grid templateColumns={'6fr 3fr 3fr'} gap={'8'} >
+                        <GridItem mt={'2'}>
                             <Recent1 img={PhotosOne} />
                             <Recent1 img={PhotosTwo} />
                             <Recent1 img={photosFour} />
                         </GridItem>
-                        <GridItem>
+                        <GridItem ms={'-4'}>
                             <Recent2 img={blog1} />
                         </GridItem>
-                        <GridItem ms={'5'} me={'5'}>
-                            <Recent2 img={secnery} />
+                        <GridItem ms={'-4'} >
+                            <Recent2 img={blog1} />
                         </GridItem>
                     </Grid>
                 </Container>
