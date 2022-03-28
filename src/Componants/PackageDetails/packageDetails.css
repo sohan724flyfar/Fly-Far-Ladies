@@ -1,5 +1,5 @@
-.allpackagebg{
-    background-image: url('../../images/package-detailsbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+.allpackagebg {
+  background-image: url("../../images/package-detailsbg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

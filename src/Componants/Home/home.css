@@ -1,41 +1,44 @@
-.home{
-    background-image: url('../../images/background.png');
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
+.home {
+  background-image: url("../../images/background.webp");
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
 
-.wishlist{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 96.08%);
-filter: blur(25px);
+.wishlist {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.26) 0%,
+    rgba(0, 0, 0, 0.26) 96.08%
+  );
+  filter: blur(25px);
 }
 
-.slick-prev:before, .slick-next:before {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: rgb(175, 59, 59);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #FE94A2;
-    border-radius: 50%;
-    padding-top: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  color: rgb(175, 59, 59);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fe94a2;
+  border-radius: 50%;
+  padding-top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .slick-dots {
-    display: none;
+  display: none;
 }
-.slick-dots li button:before{
-    display: none;
+.slick-dots li button:before {
+  display: none;
 }
-
 
 /*air ticket search */
 .sdp {
-    --theme-color: #FE94A2 !important;
-    width: 100% !important;
+  --theme-color: #fe94a2 !important;
+  width: 100% !important;
 }
