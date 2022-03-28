@@ -243,7 +243,7 @@ const PackageMain = () => {
                                 <FullPackage
                                     shortTitle={deals.shortTitle}
                                     coverimage={deals.coverimage}
-                                    longTitle={deals.description}
+                                    longTitle={deals.destination}
                                     img={PhotosOne}
                                     groupsize={deals.groupsize}
                                     description={deals.longTitle}

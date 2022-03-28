@@ -1,13 +1,13 @@
 import { Box, Button, Container, Flex, Grid, GridItem, Image, Input, InputGroup, InputLeftElement, Select, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from '@chakra-ui/react';
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
-import vedioIcon from '../../images/vedio play.png'
+import vedioIcon from "../../images/vedio play.webp";
 import { AiOutlineSearch } from 'react-icons/ai';
 import Recent1 from '../Home/Recent1';
 import Recent2 from '../Home/Recent2';
-import PhotosOne from '../../images/Photos1.jpg'
-import PhotosTwo from '../../images/photos2.jpg'
-import photosFour from '../../images/photos4.jpg'
+import PhotosOne from '../../images/Photos1.webp'
+import PhotosTwo from "../../images/photos2.webp";
+import photosFour from "../../images/photos4.webp";
 import blog1 from '../../images/blog-1.webp'
 import Pagination from '../PackageMain/Pagination';
 import Footer from '../Footer/Footer';
