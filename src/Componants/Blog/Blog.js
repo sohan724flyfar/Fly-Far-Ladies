@@ -8,7 +8,7 @@ import Recent2 from '../Home/Recent2';
 import PhotosOne from '../../images/Photos1.jpg'
 import PhotosTwo from '../../images/photos2.jpg'
 import photosFour from '../../images/photos4.jpg'
-import blog1 from '../../images/blog-1.jpeg'
+import blog1 from '../../images/blog-1.webp'
 import Pagination from '../PackageMain/Pagination';
 import Footer from '../Footer/Footer';
 import './blog.css'
